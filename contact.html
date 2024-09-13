@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    
+    <title>About</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+     <!-- Favicon-->
+    
+     <!-- Favicon-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Planet+Kosmos&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
+    <script src="script.js" defer></script>
+  
+</head>
+<body>
+
+    <div class="top-right">
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="index.html">Join VIP</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Free Resources</a>
+            <a href="contact.html">Contact Support</a>
+            <a href="viralgo.html" target="_blank"> Try <i>Viralgo</i></a>
+
+        </div>
+    </div>
+    <div class="top-left">
+        <img src="images/castlewhite.png" alt="Home" id="homeButton">
+    </div>
+
+    <div class="starry-background"></div>
+
+    <header>
+        <h1>
+            <span class="planet-kosmos">Contact</span>
+        </h1>
+        <div class="content-section">
+        <p>Let us know if you have any <span class="highlightgreen">questions, concerns,</span> or <span class="highlightgreen">anything else</span> on your mind:</p>
+    </div>
+          
+       
+      
+
+          <form
+          id="contact-form"
+          action="https://formspree.io/f/mjkbwyak"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+        <div id="status"></div>
+        
+        <script src="scripts.js"></script>
+       
+   
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
+
+
+        <script>
+            window.onload = function () {
+                window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
+                window.scrollTo(0, 0); // Scroll to the top of the page
+                
+            }
+        </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <button class="chatbot-toggler">
+          <span class="material-symbols-rounded">mode_comment</span>
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+          <header>
+            <h3>DynastyBot</h3>
+             <p id="displayArea">The variable value will appear here.</p>
+            <span class="close-btn material-symbols-outlined">close</span>
+          </header>
+          <ul class="chatbox">
+            <li class="chat incoming">
+              <span class="material-symbols-outlined">smart_toy</span>
+              <p>Hi there, I'm DynastyBot<br><strong>How can I help you today?</strong></p>
+            </li>
+          </ul>
+          <div class="chat-input">
+            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+          </div>
+        </div>
+    
+    </body>
+    </html>
+    
