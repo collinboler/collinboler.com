@@ -51,26 +51,44 @@
         </h1>
 
         <div class="content-section">
-        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
+        <p id="demo" style="font-family: 'Orbitron'; color: white;"></p>
 
 
         <script>
             var i = 0;
-            var txt = `Hi! I'm Collin Boler, a student athlete at 
-               <span style='color: orange;'>Princeton University</span>.  
-               Scroll down to learn more about me, my studies, my experience, and some of my projects!`;
-            var speed = 25;
+    var txt = `Hi! I'm Collin Boler, a student athlete at <span style='color: orange;'>Princeton University</span>.  
+               Scroll down to learn more <span style='color: ', my studies, my experience, and some of my projects!`;
+    
+    var speed = 50;  // Uniform speed for all text
 
-            function typeWriter() {
-            if (i < txt.length) {
-                <!-- document.getElementById("demo").innerHTML += txt.charAt(i); -->
-                document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            }
-            typeWriter();
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML = txt.substring(0, i + 1) + "<span class='cursor'>|</span>";
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            addLinkAndStyle();  // Add the link and color styling after typing is done
+        }
+    }
 
+    function addLinkAndStyle() {
+        var fullText = document.getElementById("demo").innerHTML;
+        // Replace "Princeton University" with a hyperlink
+        var styledText = fullText.replace(
+            "Princeton University", 
+            `<a href="https://www.princeton.edu" target="_blank" style='color: orange;' text-decoration: none;">Princeton University</a>`
+        );
+
+        stayledText = fullText.replace(
+            "about me",
+            `<a href="#about" style='color: orange;' text-decoration: none;">Princeton University</a>`,
+
+        );
+        document.getElementById("demo").innerHTML = styledText;  // Apply the styled text
+    }
+
+    typeWriter();
+    typeWriter();
         </script>
     </div>
 
@@ -160,7 +178,7 @@
     
          <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
          <p> &nbsp;&nbsp;&nbsp;&nbsp; What if you could learn how to turn your phone into a <span class="highlightgreen">revenue generating machine? </span> </p>
-         
+         <div id="about"></div>
          <p>Try completely <span class ="highlightgreen">free</span> for 7 days</p>
 
          <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
