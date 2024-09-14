@@ -115,14 +115,52 @@ header p {
 }
 
 .content-section {
-    width: 100%;
-    padding: 10px 2px;
+
+    width: 80%;
+    padding: 10px 20px;
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.5s ease-out;
-    margin-bottom: 0;
+
+
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+
+    /* width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    /* border-left: 200px solid transparent; /* 2px solid border with a black color */
+    /* border-right: 200px solid transparent; 2px solid border with a black color */ 
+    /* opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+    margin-bottom: 0; */ 
 }
+
+
+.content-section3 {
+    width: 80%;
+    padding: 10px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+
+
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    
+    /* border-left: 200px solid transparent; /* 2px solid border with a black color */
+    /* border-right: 200px solid transparent; 2px solid border with a black color */ 
+    
+  
+  }
+
 
 .content-section2 {
   width: 100%;
@@ -845,3 +883,18 @@ form button:hover {
   color: red;
   margin-top: 1rem;
 }
+
+
+/* . type writing cursor */
+
+ .cursor {
+    font-weight: bold;
+    color: white;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+

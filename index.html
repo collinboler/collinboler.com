@@ -49,12 +49,38 @@
         <h1>
             <span class="planet-kosmos">Welcome!</span>
         </h1>
+
+        <div class="content-section">
+        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
+
+
+        <script>
+            var i = 0;
+            var txt = `Hi! I'm Collin Boler, a student athlete at 
+               <span style='color: orange;'>Princeton University</span>.  
+               Scroll down to learn more about me, my studies, my experience, and some of my projects!`;
+            var speed = 25;
+
+            function typeWriter() {
+            if (i < txt.length) {
+                <!-- document.getElementById("demo").innerHTML += txt.charAt(i); -->
+                document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+            }
+            typeWriter();
+
+        </script>
+    </div>
+
         <div class="content-section">
         <p>Your <span class="highlightgreen">ticket</span> to start generating <span class="highlightgreen">passive income</span> from <span class="highlightgreen">social media.</span></p>
     </div>
           
         <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
     
+
 
         <section class="content">
           <div class="content-section">
