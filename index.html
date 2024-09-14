@@ -56,30 +56,67 @@
 
 
         <script>
+            // First typewriter effect in the header
             var i = 0;
-            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athelete</a> 
-               at <span style='color: orange;'>Princeton University</span>.  
-               Scroll down to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
+            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athlete</a> 
+                       at <span style='color: orange;'>Princeton University</span>.  
+                       Scroll down to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
             var speed = 5;
-
+        
             function typeWriter() {
-            if (i < txt.length) {
-                <!-- document.getElementById("demo").innerHTML += txt.charAt(i); -->
-                document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
-                i++;
-                setTimeout(typeWriter, speed);
+                if (i < txt.length) {
+                    document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
             }
+        
+            // Next typewriter effect for the section that appears on scroll
+            var j = 0;
+            var nextTxt = `This is another typewriter effect triggered by scrolling. It's engaging and fun!`;
+            var nextSpeed = 50;
+        
+            function nextTypeWriter() {
+                if (j < nextTxt.length) {
+                    document.getElementById("next-text").innerHTML = nextTxt.substring(0, j+1) + "<span class='cursor'>|</span>";
+                    j++;
+                    setTimeout(nextTypeWriter, nextSpeed);
+                }
             }
-            typeWriter();
-
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                // Initialize Intersection Observer to trigger the next typewriter effect when section is in view
+                const observerOptions = {
+                    threshold: 0.1
+                };
+        
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            nextTypeWriter(); // Trigger the typewriter effect
+                            observer.unobserve(entry.target); // Stop observing once triggered
+                        }
+                    });
+                }, observerOptions);
+        
+                const typewriterSection = document.querySelector('.typewriter-section');
+                observer.observe(typewriterSection);
+        
+                // Start the first typewriter effect immediately
+                typeWriter();
+            });
         </script>
+
+
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
+    <div class="content-section typewriter-section">
+        <p id="next-text" style="font-family: 'Orbitron'; color: white;"></p>
     </div>
 
-    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-    
     
      
         </section>
