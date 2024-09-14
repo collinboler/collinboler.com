@@ -49,6 +49,7 @@
         <h1>
             <span class="planet-kosmos">Welcome!</span>
         </h1>
+    
 
         <div class="content-section">
         <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
@@ -56,10 +57,10 @@
 
         <script>
             var i = 0;
-            var txt = `Hi! I'm Collin Boler, a student athlete at 
-               <span style='color: orange;'>Princeton University</span>.  
-               Scroll down to learn more about me, my studies, my experience, and some of my projects!`;
-            var speed = 25;
+            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athelete</a> 
+               at <span style='color: orange;'>Princeton University</span>.  
+               Scroll down to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
+            var speed = 5;
 
             function typeWriter() {
             if (i < txt.length) {
@@ -74,37 +75,17 @@
         </script>
     </div>
 
-        <div class="content-section">
-        <p>Your <span class="highlightgreen">ticket</span> to start generating <span class="highlightgreen">passive income</span> from <span class="highlightgreen">social media.</span></p>
-    </div>
-          
-        <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
-    
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
 
-
-        <section class="content">
-          <div class="content-section">
-            <section id="counter-section" class="counter-section">
-              <div class="counter-container">
-                    <div class="counter">
-                        <span id="views-counter" class="count2">0</span>
-                        <p id="views-text" class="fade-in">Combined Revenue</p>
-                    </div>
-                  <div class="counter">
-                      <span id="followers-counter" class="count">0</span>
-                      <p id="followers-text" class="fade-in">Combined Followers</p>
-                  </div>
-                 
-              </div>
-            </section>
-        </div>
-        </section>
     
      
         </section>
         <!-- <section class="content"> -->
             <!-- <div class="content-section"> -->
-
+            <div class="content-section">
         <div class="container" ></div>
                 <img src="images/cb2.png" alt="Central Image" class="central-image">
                 <div class="orbit linkedin">
@@ -126,114 +107,17 @@
 
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
             <!-- </section> -->
       
-    </header> 
+        </header>
     
-
-
-    <!-- <section id="counter-section" class="counter-section">
-      <div class="counter-container">
-          <div class="counter">
-              <span id="followers-counter" class="count">0</span>
-              <p id="followers-text" class="fade-in">Followers</p>
-          </div>
-          <div class="counter">
-              <span id="views-counter" class="count">0</span>
-              <p id="views-text" class="fade-in">Combined Views</p>
-          </div>
-      </div>
-    </section> -->
-    <section class="content">
-        <div class="content-section">
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-
-            <p>Are you tired of watching people who aren't nearly as <span class="highlightred">intelligent</span>, <span class="highlightred">talented</span>, or <span class="highlightred">hard working </span>as you... </p>
-
-
-              <p> &nbsp;&nbsp;&nbsp;&nbsp;
-             
-         ...make <span class ="highlightgreen">thousands of dollars</span> just by uploading a few <span class="highlightgreen">low effort</span> videos a week?</p>
-
-    
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; What if you could learn how to turn your phone into a <span class="highlightgreen">revenue generating machine? </span> </p>
-         
-         <p>Try completely <span class ="highlightgreen">free</span> for 7 days</p>
-
-         <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-    </div>
-
-
-
-
-            <!-- <div class="container" ></div>
-                <img src="images/favicon.png" alt="Central Image" class="central-image">
-                <div class="orbit tiktok">
-                    <img src="images/tiktok.png" alt="TikTok Logo">
-                </div>
-                <div class="orbit instagram">
-                    <img src="images/gram.png" alt="Instagram Logo">
-                </div>
-                <div class="orbit youtube">
-                    <img src="images/youtube.png" alt="YouTube Logo">
-                </div>
-            </div> -->
-            
- 
-
-       
-        <!-- <div class="content-section">
-            <h2>Community</h2>
-            <p>Connect with like-minded individuals and grow together.</p>
-            <a href="https://www.google.com" class="join-button"><span>Join Now</span></a>
-        </div>
-        <div class="content-section">
-            <h2>Exclusive Content</h2>
-            <p>Access premium resources that you won't find anywhere else.</p>
-            <a href="https://www.google.com" class="join-button"><span>Join Now</span></a>
-        </div> -->
-    </section>
 
     <script>
         window.onload = function () {
             window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
             window.scrollTo(0, 0); // Scroll to the top of the page
           
-            function startCountUp(id, endValue) {
-                return new Promise((resolve, reject) => {
-                    var countUp = new CountUp(id, 0, endValue);
-                    if (!countUp.error) {
-                        countUp.start(resolve);
-                    } else {
-                        console.error(countUp.error);
-                        reject(countUp.error);
-                    }
-                });
-            }
-            let options = {
-                  duration: 1,
-            };
-            Promise.all([
-            startCountUp('followers-counter', 13000000),
-            startCountUp('views-counter', 250000)
-        ]).then(() => {
-            console.log('Both counters have finished');
-            document.getElementById('followers-text').classList.add('visible');
-            document.getElementById('views-text').classList.add('visible');
-            document.getElementById('followers-counter').textContent += '+';
-            document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
-        }).catch(error => {
-            console.error('Error starting counters:', error);
-        });
     };
     </script>
 
