@@ -71,36 +71,12 @@
                 }
             }
         
-            // Next typewriter effect for the section that appears on scroll
-            var j = 0;
-            var nextTxt = `This is another typewriter effect triggered by scrolling. It's engaging and fun!`;
-            var nextSpeed = 50;
-        
-            function nextTypeWriter() {
-                if (j < nextTxt.length) {
-                    document.getElementById("next-text").innerHTML = nextTxt.substring(0, j+1) + "<span class='cursor'>|</span>";
-                    j++;
-                    setTimeout(nextTypeWriter, nextSpeed);
-                }
-            }
+           
         
             document.addEventListener("DOMContentLoaded", function () {
-                // Initialize Intersection Observer to trigger the next typewriter effect when section is in view
-                const observerOptions = {
-                    threshold: 0.1
-                };
+            
         
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            nextTypeWriter(); // Trigger the typewriter effect
-                            observer.unobserve(entry.target); // Stop observing once triggered
-                        }
-                    });
-                }, observerOptions);
-        
-                const typewriterSection = document.querySelector('.typewriter-section');
-                observer.observe(typewriterSection);
+              
         
                 // Start the first typewriter effect immediately
                 typeWriter();
