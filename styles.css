@@ -458,7 +458,7 @@ header p {
   }
   .chatbox .incoming p {
     color: #ffffff;
-    background: #817e94;
+    background: #000000;
   }
   .chatbot .chat-input {
     display: flex;
@@ -536,7 +536,7 @@ header p {
   transform: translate(-50%, -50%);
   z-index: 2; */
   z-index: 10; /* Set a higher z-index to ensure it's on top */
-  width: 15%;
+  width: 12%;
   height: auto;
   display: block;
   position: absolute;
