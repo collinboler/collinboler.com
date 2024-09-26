@@ -49,211 +49,157 @@
         <h1>
             <span class="planet-kosmos">Welcome!</span>
         </h1>
+    
 
         <div class="content-section">
-        <p id="demo" style="font-family: 'Orbitron'; color: white;"></p>
+        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
 
 
         <script>
+            // First typewriter effect in the header
             var i = 0;
-    var txt = `Hi! I'm Collin Boler, a student athlete at <span style='color: orange;'>Princeton University</span>.  
-               Scroll down to learn more <span style='color: ', my studies, my experience, and some of my projects!`;
-    
-    var speed = 50;  // Uniform speed for all text
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("demo").innerHTML = txt.substring(0, i + 1) + "<span class='cursor'>|</span>";
-            i++;
-            setTimeout(typeWriter, speed);
-        } else {
-            addLinkAndStyle();  // Add the link and color styling after typing is done
-        }
-    }
-
-    function addLinkAndStyle() {
-        var fullText = document.getElementById("demo").innerHTML;
-        // Replace "Princeton University" with a hyperlink
-        var styledText = fullText.replace(
-            "Princeton University", 
-            `<a href="https://www.princeton.edu" target="_blank" style='color: orange;' text-decoration: none;">Princeton University</a>`
-        );
-
-        stayledText = fullText.replace(
-            "about me",
-            `<a href="#about" style='color: orange;' text-decoration: none;">Princeton University</a>`,
-
-        );
-        document.getElementById("demo").innerHTML = styledText;  // Apply the styled text
-    }
-
-    typeWriter();
-    typeWriter();
+            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athlete</a> 
+                       at <span style='color: orange;'>Princeton University</span>.  
+                       Scroll down to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
+            var speed = 5;
+        
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+        
+            // Next typewriter effect for the section that appears on scroll
+            var j = 0;
+            var nextTxt = `This is another typewriter effect triggered by scrolling. It's engaging and fun!`;
+            var nextSpeed = 50;
+        
+            function nextTypeWriter() {
+                if (j < nextTxt.length) {
+                    document.getElementById("next-text").innerHTML = nextTxt.substring(0, j+1) + "<span class='cursor'>|</span>";
+                    j++;
+                    setTimeout(nextTypeWriter, nextSpeed);
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                // Initialize Intersection Observer to trigger the next typewriter effect when section is in view
+                const observerOptions = {
+                    threshold: 0.1
+                };
+        
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            nextTypeWriter(); // Trigger the typewriter effect
+                            observer.unobserve(entry.target); // Stop observing once triggered
+                        }
+                    });
+        https://d9hhrg4mnvzow.cloudfront.net/get.netlify.com/consultation/d5p3l6-clip-path-group-1_1000000000000000000028.png        }, observerOptions);
+        
+                const typewriterSection = document.querySelector('.typewriter-section');
+                observer.observe(typewriterSection);
+        
+                // Start the first typewriter effect immediately
+                typeWriter();
+            });
         </script>
+
+
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
+    <div class="content-section typewriter-section">
+        <p id="next-text" style="font-family: 'Orbitron'; color: white;"></p>
     </div>
 
-        <div class="content-section">
-        <p>Your <span class="highlightgreen">ticket</span> to start generating <span class="highlightgreen">passive income</span> from <span class="highlightgreen">social media.</span></p>
-    </div>
-          
-        <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
-    
-
-
-        <section class="content">
-          <div class="content-section">
-            <section id="counter-section" class="counter-section">
-              <div class="counter-container">
-                    <div class="counter">
-                        <span id="views-counter" class="count2">0</span>
-                        <p id="views-text" class="fade-in">Combined Revenue</p>
-                    </div>
-                  <div class="counter">
-                      <span id="followers-counter" class="count">0</span>
-                      <p id="followers-text" class="fade-in">Combined Followers</p>
-                  </div>
-                 
-              </div>
-            </section>
-        </div>
-        </section>
     
      
         </section>
         <!-- <section class="content"> -->
             <!-- <div class="content-section"> -->
+                <h1>
+            <div class="content-section">
+                <div class="container" >
+                        <img src="images/cb2.png" alt="Central Image" class="central-image">
+                        <div class="orbit linkedin">
+                            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
+                            <img src="images/linkedin.webp" alt="LinkedIn's Logo">
+                                </a>
+                        </div>
+                    
+                        <div class="orbit gmail">
+                            <a href="mailto:cb6256@princeton.edu">
+                                <img src="images/gmail.png" target="_blank" alt="Gmail's Logo" >
+                            </a>
+                        </div>
+                        <div class="orbit github">
+                            <a href="https://github.com/collinboler" target="_blank">
+                                
+                            <img src="images/github.png" target="_blank" alt="Github's Logo" >
+                            </a>
 
-        <div class="container" ></div>
-                <img src="images/cb2.png" alt="Central Image" class="central-image">
-                <div class="orbit linkedin">
-                    <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
-                    <img src="images/linkedin.webp" alt="LinkedIn's Logo">
-                        </a>
-                </div>
-              
-                <div class="orbit gmail">
-                    <a href="mailto:cb6256@princeton.edu">
-                        <img src="images/gmail.png" alt="Gmail's Logo">
-                    </a>
-                </div>
-                <div class="orbit github">
-                    <a href="https://github.com/collinboler">
-                        
-                    <img src="images/github.png" alt="Github's Logo">
-                    </a>
-
-                </div>
+                        </div>
+                    </div>
             </div>
-        <!-- </div> -->
+        </h1>
             <!-- </section> -->
-      
-    </header> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>   
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        </header>
     
 
-
-    <!-- <section id="counter-section" class="counter-section">
-      <div class="counter-container">
-          <div class="counter">
-              <span id="followers-counter" class="count">0</span>
-              <p id="followers-text" class="fade-in">Followers</p>
-          </div>
-          <div class="counter">
-              <span id="views-counter" class="count">0</span>
-              <p id="views-text" class="fade-in">Combined Views</p>
-          </div>
-      </div>
-    </section> -->
-    <section class="content">
-        <div class="content-section">
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-
-            <p>Are you tired of watching people who aren't nearly as <span class="highlightred">intelligent</span>, <span class="highlightred">talented</span>, or <span class="highlightred">hard working </span>as you... </p>
-
-
-              <p> &nbsp;&nbsp;&nbsp;&nbsp;
-             
-         ...make <span class ="highlightgreen">thousands of dollars</span> just by uploading a few <span class="highlightgreen">low effort</span> videos a week?</p>
-
-    
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; What if you could learn how to turn your phone into a <span class="highlightgreen">revenue generating machine? </span> </p>
-         <div id="about"></div>
-         <p>Try completely <span class ="highlightgreen">free</span> for 7 days</p>
-
-         <a href="https://whop.com/checkout/4Z3mKfXozfe60A6U2l-l6LX-tPTj-xjqE-VPsetq6kNDgb/" target="_blank" class="join-button"><span>Join Now</span></a>
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-         <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>
-
-    </div>
-
-
-
-
-            <!-- <div class="container" ></div>
-                <img src="images/favicon.png" alt="Central Image" class="central-image">
-                <div class="orbit tiktok">
-                    <img src="images/tiktok.png" alt="TikTok Logo">
-                </div>
-                <div class="orbit instagram">
-                    <img src="images/gram.png" alt="Instagram Logo">
-                </div>
-                <div class="orbit youtube">
-                    <img src="images/youtube.png" alt="YouTube Logo">
-                </div>
-            </div> -->
-            
- 
-
-       
-        <!-- <div class="content-section">
-            <h2>Community</h2>
-            <p>Connect with like-minded individuals and grow together.</p>
-            <a href="https://www.google.com" class="join-button"><span>Join Now</span></a>
-        </div>
-        <div class="content-section">
-            <h2>Exclusive Content</h2>
-            <p>Access premium resources that you won't find anywhere else.</p>
-            <a href="https://www.google.com" class="join-button"><span>Join Now</span></a>
-        </div> -->
-    </section>
-
-    <script>
-        window.onload = function () {
-            window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
-            window.scrollTo(0, 0); // Scroll to the top of the page
-          
-            function startCountUp(id, endValue) {
-                return new Promise((resolve, reject) => {
-                    var countUp = new CountUp(id, 0, endValue);
-                    if (!countUp.error) {
-                        countUp.start(resolve);
-                    } else {
-                        console.error(countUp.error);
-                        reject(countUp.error);
-                    }
-                });
-            }
-            let options = {
-                  duration: 1,
-            };
-            Promise.all([
-            startCountUp('followers-counter', 13000000),
-            startCountUp('views-counter', 250000)
-        ]).then(() => {
-            console.log('Both counters have finished');
-            document.getElementById('followers-text').classList.add('visible');
-            document.getElementById('views-text').classList.add('visible');
-            document.getElementById('followers-counter').textContent += '+';
-            document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
-        }).catch(error => {
-            console.error('Error starting counters:', error);
-        });
-    };
-    </script>
+        <script>
+            window.onload = function () {
+                window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
+                window.scrollTo(0, 0); // Scroll to the top of the page
+              
+                function startCountUp(id, endValue) {
+                    return new Promise((resolve, reject) => {
+                        var countUp = new CountUp(id, 0, endValue);
+                        if (!countUp.error) {
+                            countUp.start(resolve);
+                        } else {
+                            console.error(countUp.error);
+                            reject(countUp.error);
+                        }
+                    });
+                }
+                let options = {
+                      duration: 1,
+                };
+                Promise.all([
+                startCountUp('followers-counter', 13000000),
+                startCountUp('views-counter', 250000)
+            ]).then(() => {
+                console.log('Both counters have finished');
+                document.getElementById('followers-text').classList.add('visible');
+                document.getElementById('views-text').classList.add('visible');
+                document.getElementById('followers-counter').textContent += '+';
+                document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
+            }).catch(error => {
+                console.error('Error starting counters:', error);
+            });
+        };
+        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <button class="chatbot-toggler">

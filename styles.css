@@ -544,7 +544,7 @@ header p {
   bottom: 0px;
   right: 0;
   margin: auto;
-  transform: translate(0px, 250px);
+  transform: translate(0px, 150px);
 
 
 }
@@ -562,7 +562,7 @@ header p {
 .orbit img {
   width: 100%;
   height: auto;
-  transform: translate(0px, 250px);
+  transform: translate(0px, 150px);
  
 }
 
@@ -694,6 +694,8 @@ header {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: rgb(0, 0, 0);
+
 }
 
 .star {
