@@ -1,4 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // new central image
+    const centralImage = document.querySelector('.central-image');
+    const orbits = document.querySelectorAll('.orbit');
+
+    const originalSrc = 'images/pause.png';
+    const newImageSrc = 'images/play.png'; // Replace with the path to your new image
+
+    let isPaused = false;
+
+    centralImage.addEventListener('click', function() {
+        if (!isPaused) {
+            orbits.forEach(function(orbit) {
+                orbit.style.animationPlayState = 'paused';
+            });
+            // Change the central image src to new image
+            centralImage.src = newImageSrc;
+            isPaused = true;
+        } else {
+            orbits.forEach(function(orbit) {
+                orbit.style.animationPlayState = 'running';
+            });
+            // Change the central image src back to the original
+            centralImage.src = originalSrc;
+            isPaused = false;
+        }
+    });
+
     const observerOptions = {
         threshold: 0.1
     };
@@ -255,22 +282,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-// // old starS?
-// document.addEventListener('DOMContentLoaded', () => {
-//     const starryBackground = document.querySelector('.starry-background');
-//     const numStars = 750;
-
-//     for (let i = 0; i < numStars; i++) {
-//         const star = document.createElement('div');
-//         star.classList.add('star');
-//         star.style.top = `${Math.random() * 100}%`;
-//         star.style.left = `${Math.random() * 100}%`;
-//         star.style.animationDuration = `${Math.random() * 3 + 1}s`;
-//         star.style.animationDelay = `${Math.random() * 3}s`;
-//         starryBackground.appendChild(star);
-//     }
-// });
 
 // stars with shooting star
 document.addEventListener('DOMContentLoaded', () => {

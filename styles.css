@@ -535,7 +535,8 @@ header p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2; */
-  width: 5%;
+  z-index: 10; /* Set a higher z-index to ensure it's on top */
+  width: 15%;
   height: auto;
   display: block;
   position: absolute;
@@ -544,7 +545,7 @@ header p {
   bottom: 0px;
   right: 0;
   margin: auto;
-  transform: translate(0px, 150px);
+  transform: translate(0px, 160px);
 
 
 }
@@ -664,8 +665,8 @@ header {
   transform: translate(0px, 100px);
 }
 .central-image {
-  width: 20%;
-  transform: translate(0px, 290px);
+  width: 40%;
+  transform: translate(0px, 300px);
   
   
 }
@@ -900,3 +901,8 @@ form button:hover {
     50% { opacity: 0; }
   }
 
+/* Add this class for when you want to stop the blink */
+.cursor.stop-blink {
+  animation: none;
+  visibility: hidden;
+}

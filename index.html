@@ -60,7 +60,7 @@
             var i = 0;
             var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athlete</a> 
                        at <span style='color: orange;'>Princeton University</span>.  
-                       Scroll down to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
+                       Explore the site to learn more <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and some of my <a href="#about" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
             var speed = 5;
         
             function typeWriter() {
@@ -69,8 +69,17 @@
                     i++;
                     setTimeout(typeWriter, speed);
                 }
+                function stopCursorBlink() {
+                    const cursor = document.querySelector('.cursor');
+                    if (cursor) {
+                        cursor.classList.add('stop-blink'); // Add class to stop blinking
+                    }
+                }
+                
+                // Stop the blinking cursor after 5 seconds
+                setTimeout(stopCursorBlink, 10000); // 5000ms = 5 seconds
             }
-        
+            
            
         
             document.addEventListener("DOMContentLoaded", function () {
@@ -101,7 +110,7 @@
                 <h1>
             <div class="content-section">
                 <div class="container" >
-                        <img src="images/cb2.png" alt="Central Image" class="central-image">
+                        <img src="images/pause.png" alt="Central Image" class="central-image">
                         <div class="orbit linkedin">
                             <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
                             <img src="images/linkedin.webp" alt="LinkedIn's Logo">
