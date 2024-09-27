@@ -936,7 +936,7 @@ header {
  
 } */
 .custom-button {
-  padding: 2.5px 5px;
+  padding: 0px 2.5px;
 }
 .p {
   position: relative;
@@ -955,5 +955,9 @@ header {
 header {
   padding: 0px, 0px;
 
+}
+h1 .planet-kosmos {
+  font-size: 45px;
+  font-family: 'Orbitron';
 }
 }
