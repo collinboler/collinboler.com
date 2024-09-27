@@ -545,10 +545,9 @@ header p {
   bottom: 0px;
   right: 0;
   margin: auto;
-  transform: translate(0px, 160px);
-
-
+  transform: translate(0px, 180px);
 }
+
 
 .orbit {
   position: absolute;
@@ -564,7 +563,6 @@ header p {
   width: 100%;
   height: auto;
   transform: translate(0px, 150px);
- 
 }
 
 .p {
