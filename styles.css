@@ -908,13 +908,13 @@ header {
 
 
 .orbit img {
-  width: 100%;
+  width: 75%;
   height: auto;
-  transform: translate(0px, 70px);
+  transform: translate(0px, -60px);
 }
 .central-image {
   width: 40%;
-  transform: translate(0px, 60px);
+  transform: translate(0px, -50px);
   
   
 }
@@ -928,14 +928,14 @@ header {
   }
 }
 
-.orbit img {
+/* .orbit img {
   width: 75%;
   height: auto;
   transform: translate(0px, 50px);
  
-}
+} */
 .custom-button {
-  padding: 3.75px 7.5px;
+  padding: 2.5px 5px;
 }
 
 }
