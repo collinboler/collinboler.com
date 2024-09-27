@@ -545,7 +545,7 @@ header p {
   bottom: 0px;
   right: 0;
   margin: auto;
-  transform: translate(0px, 180px);
+  transform: translate(0px, 90px);
 }
 
 
@@ -562,7 +562,7 @@ header p {
 .orbit img {
   width: 100%;
   height: auto;
-  transform: translate(0px, 150px);
+  transform: translate(0px, 60px);
 }
 
 .p {
@@ -600,92 +600,7 @@ header p {
   }
 }
 
-@media only screen and (max-width: 1000px) {
 
-  .counter-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  
-  }
-
-  .counter .count {
-    /* font-size: 3em; */
-    font-size: 40px;
-   
-  }
-  .counter .count2 {
-    /* font-size: 3em; */
-    font-size: 40px;
-
-  }
-  
-
-  .counter-section {
-    padding: 0px 0px;
-  }
-  .grid-container {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 58px;
-  }
-
-  /* header h1 {
-    font-size: 2em;
-} */
-
-header {
-  text-align: center;
-  padding: 0px 20px;
-}
-
-/* change orbit ratio based on mobile
-.tiktok {
-  animation: orbit 4s linear infinite;
-}
-
-.instagram {
-  animation: orbit 4s linear infinite;
-  animation-delay: -1.34s; /* Start 1/3 way through TikTok's orbit */
-/* }
-
-.youtube {
-  animation: orbit 4s linear infinite;
-  animation-delay: -2.67s; /* Start 2/3 way through TikTok's orbit */
-
-
-
-.orbit img {
-  width: 100%;
-  height: auto;
-  transform: translate(0px, 100px);
-}
-.central-image {
-  width: 40%;
-  transform: translate(0px, 300px);
-  
-  
-}
-
-@keyframes orbit {
-  0% {
-      transform: rotate(0deg) translateX(80px) rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg) translateX(80px) rotate(-360deg);
-  }
-}
-
-.orbit img {
-  width: 75%;
-  height: auto;
-  transform: translate(0px, 290px);
- 
-}
-
-}
 /* stars */
 
 .starry-background {
@@ -903,4 +818,124 @@ form button:hover {
 .cursor.stop-blink {
   animation: none;
   visibility: hidden;
+}
+
+/* button for pages */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(45deg, #9c2bff, #ff41f9);
+  border-radius: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.custom-button:hover {
+  background: linear-gradient(45deg, #ff41f9, #9c2bff);
+  transform: translateY(-5px);
+}
+
+.custom-button:active {
+  background: linear-gradient(45deg, #c32bff, #41ffa3);
+  transform: translateY(0);
+}
+
+/* mobile compatibility */
+@media only screen and (max-width: 1000px) {
+
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  
+  }
+
+  .counter .count {
+    /* font-size: 3em; */
+    font-size: 40px;
+   
+  }
+  .counter .count2 {
+    /* font-size: 3em; */
+    font-size: 40px;
+
+  }
+  
+
+  .counter-section {
+    padding: 0px 0px;
+  }
+  .grid-container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  /* header h1 {
+    font-size: 2em;
+} */
+
+header {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+/* change orbit ratio based on mobile
+.tiktok {
+  animation: orbit 4s linear infinite;
+}
+
+.instagram {
+  animation: orbit 4s linear infinite;
+  animation-delay: -1.34s; /* Start 1/3 way through TikTok's orbit */
+/* }
+
+.youtube {
+  animation: orbit 4s linear infinite;
+  animation-delay: -2.67s; /* Start 2/3 way through TikTok's orbit */
+
+
+
+.orbit img {
+  width: 100%;
+  height: auto;
+  transform: translate(0px, 70px);
+}
+.central-image {
+  width: 40%;
+  transform: translate(0px, 60px);
+  
+  
+}
+
+@keyframes orbit {
+  0% {
+      transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+
+.orbit img {
+  width: 75%;
+  height: auto;
+  transform: translate(0px, 50px);
+ 
+}
+.custom-button {
+  padding: 3.75px 7.5px;
+}
+
 }
