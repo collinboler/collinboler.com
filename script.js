@@ -46,51 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const joinButtons = document.querySelectorAll('.join-button');
 
-    joinButtons.forEach(button => {
-        button.addEventListener('click', createFloatingMoney);
-    });
-
-    function createFloatingMoney(event) {
-        const centerX = window.innerWidth / 2;
-        const minX = centerX - 20;
-        const maxX = centerX + 20;
-        const images = ['images/money.png', 'images/like.png'];
-
-
-        const button = event.currentTarget;
-        for (let i = 0; i < 50; i++) {
-            const money = document.createElement('div');
-            money.classList.add('money');
-          
-            const randomImage = images[Math.floor(Math.random() * images.length)];
-            money.style.backgroundImage = `url(${randomImage})`;
-
-            money.style.left = `${minX + Math.random() * (maxX - minX)}px`;
-     
-            money.style.top = `${button.getBoundingClientRect().top + window.scrollY}px`;
-   
-
-             // Set random direction and distance for explosion
-             const angle = Math.random() * 2 * Math.PI;
-             const distance = Math.random() * 200 + 50; // Random distance between 50 and 250 pixels
-             const x = Math.cos(angle) * distance;
-             const y = Math.sin(angle) * distance;
- 
-             money.style.setProperty('--x', `${x}px`);
-             money.style.setProperty('--y', `${y}px`);
- 
-             document.body.appendChild(money);
-
-            // money.style.top = `${mouseY}px`;
-            document.body.appendChild(money);
-
-
-
-            money.addEventListener('animationend', () => {
-                money.remove();
-            });
-        }
-    }
+    
+    
 });
 
 const chatbotToggler = document.querySelector(".chatbot-toggler");
