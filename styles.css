@@ -1038,6 +1038,7 @@ h1 .planet-kosmos {
   cursor: pointer;
   color: white;
   font-size: 18px;
+  z-index: 1000;
 }
 
 /* Overlay for background when popup is active */
@@ -1050,4 +1051,48 @@ h1 .planet-kosmos {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+/* photowheel */
+.photo-wheel {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex; /* Add flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  overflow: hidden;
+}
+.photo-slide {
+  position: center;
+  height: 300px;
+  width: auto;
+  display: none;
+}
+.photo-slide.active {
+  display: block;
+}
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 18px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
 }

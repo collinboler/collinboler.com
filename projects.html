@@ -25,10 +25,10 @@
             <span></span>
         </div>
         <div class="dropdown-menu" id="dropdownMenu">
-            <a href="index.html">Experience</a>
-            <a href="about.html">Projects</a>
-            <a href="about.html">About Me</a>
-            <a href="contact.html">Contact Me!</a> 
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact Me!</a>
         </div>
     </div>
     <div class="top-left">
@@ -41,7 +41,47 @@
         </h1>
         <div class="content-section">
         <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
+        <script>
+            // First typewriter effect in the header
+            var i = 0;
+            var txt = "Check out some projects I've been working on in my spare time!";
+            var speed = 50;
         
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+                function stopCursorBlink() {
+                    const cursor = document.querySelector('.cursor');
+                    if (cursor) {
+                        cursor.classList.add('stop-blink'); // Add class to stop blinking
+                    }
+                }
+                
+                // Stop the blinking cursor after 5 seconds
+                setTimeout(stopCursorBlink, 7500); // 5000ms = 5 seconds
+            }
+            
+           
+        
+            document.addEventListener("DOMContentLoaded", function () {
+            
+        
+              
+        
+                // Start the first typewriter effect immediately
+                typeWriter();
+            });
+        </script>
+
+
+    <div class="button-container">
+        <a href="index.html" class="custom-button">Home</a>
+        <a href="aboutme.html" class="custom-button">About Me</a>
+        <a href="experience.html" class="custom-button">Experience</a>
+    </div>
         </section>
                     <!-- overlay 1 -->
             <div class="module" id="infoModule1">

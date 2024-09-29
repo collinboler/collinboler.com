@@ -457,4 +457,80 @@ overlay4.onclick = function() {
     overlay4.style.display = 'none';
 };
 
+// photowheel 
+function createPhotoSlider(containerId, images) {
+    const container = document.getElementById(containerId);
+    
+    // Clear any existing content
+    container.innerHTML = '';
+
+    // Create photo slider HTML structure
+    const sliderHtml = `
+        <div class="photo-wheel">
+            <button class="prev-btn" onclick="changeSlide(-1, '${containerId}')">&#10094;</button>
+            <div class="photo-container">
+                ${images.map((image, index) => `<img class="photo-slide" src="${image}" alt="Photo ${index + 1}" style="display: ${index === 0 ? 'block' : 'none'};">`).join('')}
+            </div>
+            <button class="next-btn" onclick="changeSlide(1, '${containerId}')">&#10095;</button>
+        </div>
+    `;
+
+    // Append to the container
+    container.innerHTML = sliderHtml;
+
+    // Initialize the first slide
+    showSlide(0, containerId);
+}
+
+let slideIndex = {};
+const slides = {};
+
+function showSlide(index, containerId) {
+    const slidesInContainer = slides[containerId];
+    if (!slidesInContainer) return; // Make sure the slides exist
+    if (index >= slidesInContainer.length) {
+        slideIndex[containerId] = 0;
+    }
+    if (index < 0) {
+        slideIndex[containerId] = slidesInContainer.length - 1;
+    }
+    for (let i = 0; i < slidesInContainer.length; i++) {
+        slidesInContainer[i].style.display = 'none';
+    }
+    slidesInContainer[slideIndex[containerId]].style.display = 'block';
+}
+
+function changeSlide(n, containerId) {
+    slideIndex[containerId] += n;
+    showSlide(slideIndex[containerId], containerId);
+}
+
+// Initialize multiple sliders by passing image arrays and container IDs
+document.addEventListener("DOMContentLoaded", function() {
+    // Example usage for the first slider
+    createPhotoSlider('photo-slider-container-1', [
+        'images/lakemountain.jpg',
+        'images/coop.jpg',
+        'images/meercat.jpg',
+        'images/rockylake.jpg',
+        'images/redpanda.jpg'
+    ]);
+    //
+
+    // Example usage for the second slider
+    createPhotoSlider('photo-slider-container-2', [
+        'images/images/dadandi.jpg',
+        'images/surfgroup.jpg',
+         'images/surfbeach.HEIC'
+    ]);
+    
+    // Now get all slides for each container
+    slides['photo-slider-container-1'] = document.querySelectorAll('#photo-slider-container-1 .photo-slide');
+    slides['photo-slider-container-2'] = document.querySelectorAll('#photo-slider-container-2 .photo-slide');
+
+    // Initialize slide index for each container
+    slideIndex['photo-slider-container-1'] = 0;
+    slideIndex['photo-slider-container-2'] = 0;
+});
+
 
