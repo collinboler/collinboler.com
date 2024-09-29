@@ -507,7 +507,7 @@ function changeSlide(n, containerId) {
 
 // Initialize multiple sliders by passing image arrays and container IDs
 document.addEventListener("DOMContentLoaded", function() {
-    // Example usage for the first slider
+    // photography slider
     createPhotoSlider('photo-slider-container-1', [
         'images/lakemountain.jpg',
         'images/coop.jpg',
@@ -517,11 +517,11 @@ document.addEventListener("DOMContentLoaded", function() {
     ]);
     //
 
-    // Example usage for the second slider
+    // surfing slider
     createPhotoSlider('photo-slider-container-2', [
-        'images/images/dadandi.jpg',
+        'images/dadandi.jpg',
         'images/surfgroup.jpg',
-         'images/surfbeach.HEIC'
+         'images/surfbeach.jpg'
     ]);
     
     // Now get all slides for each container
