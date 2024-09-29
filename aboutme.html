@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Collin Boler</title>
+    <link rel="icon" type="image/x-icon" href="images/cb2.png" />
+     <!-- Favicon-->
+     <!-- Favicon-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Planet+Kosmos&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="top-right">
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="index.html">Experience</a>
+            <a href="about.html">Projects</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact Me!</a> 
+        </div>
+    </div>
+    <div class="top-left">
+        <img src="images/cb2.png" alt="Home" id="homeButton">
+    </div>
+    <div class="starry-background"></div>
+    <header>
+        <h1>
+            <span class="planet-kosmos">Experience</span>
+        </h1>
+        <div class="content-section">
+        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
+        
+        </section>
+            <!-- overlay 1 -->
+            <div class="module" id="infoModule1">
+                <img src="images/1440.io2.jpg" alt="Image">
+                <div class="text-content">
+                    <h3><str>Software Engineering Intern, <span style='color: black;'>1440.io</span><h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Park City Utah | <i>June - August 2024</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay1"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup1">
+                <span class="close-btn" id="closePopup1">&times;</span>
+                <h3 style="text-align: left">Software Engineering Intern, 1440.io | <i>June - August 2024</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px; padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Contributed to the development and maintenance of Salesforce-based applications for clients including Lowe's, Formula One, Estée Lauder, and Lego. 
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Helped improve the user interface and functionality of a Salesforce integrated web app that allows clients to communicate with customers in different languages in real time. Implemented software improvements in response to client feedback by engineering solutions in Javascript, HTML/CSS, Apex, and SQL.  
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Helped design and perform tests to ensure quality assurance for products in development. Updated documentation for code maintainability.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 2 -->
+            <div class="module" id="infoModule4">
+                <img src="images/greenmountain.webp" alt="Image">
+                <div class="text-content">
+                    <h3>Camp Counselor, <span style='color:  rgb(88, 228, 57);'>Green Mountain Running Camp</span></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Meriden, NH | <i>July 2023</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay4"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup4">
+                <span class="close-btn" id="closePopup4">&times;</span>
+                <h3 style="text-align: left">Camp Counselor, Green Mountain Running Camp | <i>July 2023</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Ensured the safety and wellbeing of campers at all times.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Responded to emergencies and unexpected situations calmly and effectively. 
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 3 (New Module) -->
+
+            <div class="module" id="infoModule2">
+                <img src="images/nys.jpeg" alt="Image">
+                <div class="text-content">
+                    <h3 style="text-align: left">Head Lifeguard, <span style='color: rgb(49, 87, 130);'>NYS Pool Management</span></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left;  font-size: 14px !important;">NJ | <i>Summers '22 and '23</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay2"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup2">
+                <span class="close-btn" id="closePopup2">&times;</span>
+                <h3 style="text-align: left">Head Lifeguard, NYS Pool Management | <i>Summers '22 and '23</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Monitored pools and maintained safety. Maintained records of pool usage, incidents, chemical incidents, and maintenance activities.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Addressed customer concerns, enforced rules.                     
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 4 (New Module) -->
+            <div class="module" id="infoModule3">
+                <img src="images/chopt.png" alt="Image">
+                <div class="text-content">
+                    <h3 style="text-align: left">Salad Maker/Team Member, <span style='color:  rgb(7, 107, 109);'>Chop't Salad Co</span></h3></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left;  font-size: 14px !important;">New Providence, NJ |<i>July 2021 - September 2021</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay3"></div>
+             <!-- Popup module -->
+             <div class="popup" id="popup3">
+                <span class="close-btn" id="closePopup3">&times;</span>
+                <h3 style="text-align: left">Salad Maker/Team Member, Chop't Salad Co | <i>July - September 2021</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Engaged with customers, took orders, answered questions about the menu, made salads and other menu items to order in front of customers, handled payment transactions. 
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Prepared ingredients, maintained cleanliness, managed inventory, and worked as part of a team. 
+                    </li>
+                </ul>
+            </div>
+
+
+           
+           
+        <!-- <section class="content"> -->
+            <!-- <div class="content-section"> -->
+                <h1>
+            <div class="content-section">
+                <div class="container" >
+                        <img src="images/pause.png" alt="Central Image" class="central-image">
+                        <div class="orbit linkedin">
+                            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
+                            <img src="images/linkedin.webp" alt="LinkedIn's Logo">
+                                </a>
+                        </div>
+                    
+                        <div class="orbit gmail">
+                            <a href="mailto:cb6256@princeton.edu">
+                                <img src="images/gmail.png" target="_blank" alt="Gmail's Logo" >
+                            </a>
+                        </div>
+                        <div class="orbit github">
+                            <a href="https://github.com/collinboler" target="_blank">
+                                
+                            <img src="images/github.png" target="_blank" alt="Github's Logo" >
+                            </a>
+
+                        </div>
+                    </div>
+            </div>
+        </h1>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
+        
+            <p style="font-family: 'Arial', sans-serif; font-size: 12px; color: white; !important;">© 2024 by Collin Boler. All Rights Reserved.</p>
+
+        </header>
+    
+
+        <script>
+            window.onload = function () {
+                window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
+                window.scrollTo(0, 0); // Scroll to the top of the page
+              
+                function startCountUp(id, endValue) {
+                    return new Promise((resolve, reject) => {
+                        var countUp = new CountUp(id, 0, endValue);
+                        if (!countUp.error) {
+                            countUp.start(resolve);
+                        } else {
+                            console.error(countUp.error);
+                            reject(countUp.error);
+                        }
+                    });
+                }
+                let options = {
+                      duration: 1,
+                };
+                Promise.all([
+                startCountUp('followers-counter', 13000000),
+                startCountUp('views-counter', 250000)
+            ]).then(() => {
+                console.log('Both counters have finished');
+                document.getElementById('followers-text').classList.add('visible');
+                document.getElementById('views-text').classList.add('visible');
+                document.getElementById('followers-counter').textContent += '+';
+                document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
+            }).catch(error => {
+                console.error('Error starting counters:', error);
+            });
+        };
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h3>Collin's ChatBot</h3>
+         <p id="displayArea">The variable value will appear here.</p>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there! I'm Collin's ChatBot<br><strong>Have any questions about Collin Boler?</strong></p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+</body>
+</html>
