@@ -100,6 +100,7 @@ Helped design and perform tests to ensure quality assurance for products in deve
 \
 Camp Counselor, Green Mountain Running Camp | Meriden, NH		                       July 2023 \
 Ensured the safety and wellbeing of campers at all times. Responded to emergencies and unexpected situations calmly and effectively. \
+\
 Salad Maker/Team Member, Chop’t Salad Co | New Providence, NJ   	            Summer/Early Fall 2021 \
 Engaged with customers, took orders, answered questions about the menu, made salads and other menu items to order in front of customers, handled payment transactions. Prepared ingredients, maintained cleanliness, managed inventory, and worked as part of a team. \
 \
@@ -531,6 +532,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize slide index for each container
     slideIndex['photo-slider-container-1'] = 0;
     slideIndex['photo-slider-container-2'] = 0;
+
 });
 
 

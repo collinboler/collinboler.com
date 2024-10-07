@@ -1096,3 +1096,11 @@ h1 .planet-kosmos {
 .next-btn {
   right: 0;
 }
+
+/* CSS rule to hide Module 4 on aboutme.html */
+body.about-page #infoModule4,
+body.about-page #closepopup4,
+body.about-page #overlay4,
+body.about-page #popup4 {
+    display: none;
+}
