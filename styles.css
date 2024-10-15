@@ -458,7 +458,7 @@ header p {
   }
   .chatbox .incoming p {
     color: #ffffff;
-    background: #817e94;
+    background: #000000;
   }
   .chatbot .chat-input {
     display: flex;
@@ -535,7 +535,8 @@ header p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2; */
-  width: 5%;
+  z-index: 10; /* Set a higher z-index to ensure it's on top */
+  width: 12%;
   height: auto;
   display: block;
   position: absolute;
@@ -544,10 +545,9 @@ header p {
   bottom: 0px;
   right: 0;
   margin: auto;
-  transform: translate(0px, 150px);
-
-
+  transform: translate(0px, 90px);
 }
+
 
 .orbit {
   position: absolute;
@@ -562,8 +562,7 @@ header p {
 .orbit img {
   width: 100%;
   height: auto;
-  transform: translate(0px, 150px);
- 
+  transform: translate(0px, 60px);
 }
 
 .p {
@@ -601,92 +600,7 @@ header p {
   }
 }
 
-@media only screen and (max-width: 1000px) {
 
-  .counter-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  
-  }
-
-  .counter .count {
-    /* font-size: 3em; */
-    font-size: 40px;
-   
-  }
-  .counter .count2 {
-    /* font-size: 3em; */
-    font-size: 40px;
-
-  }
-  
-
-  .counter-section {
-    padding: 0px 0px;
-  }
-  .grid-container {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 58px;
-  }
-
-  /* header h1 {
-    font-size: 2em;
-} */
-
-header {
-  text-align: center;
-  padding: 0px 20px;
-}
-
-/* change orbit ratio based on mobile
-.tiktok {
-  animation: orbit 4s linear infinite;
-}
-
-.instagram {
-  animation: orbit 4s linear infinite;
-  animation-delay: -1.34s; /* Start 1/3 way through TikTok's orbit */
-/* }
-
-.youtube {
-  animation: orbit 4s linear infinite;
-  animation-delay: -2.67s; /* Start 2/3 way through TikTok's orbit */
-
-
-
-.orbit img {
-  width: 100%;
-  height: auto;
-  transform: translate(0px, 100px);
-}
-.central-image {
-  width: 20%;
-  transform: translate(0px, 290px);
-  
-  
-}
-
-@keyframes orbit {
-  0% {
-      transform: rotate(0deg) translateX(80px) rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg) translateX(80px) rotate(-360deg);
-  }
-}
-
-.orbit img {
-  width: 75%;
-  height: auto;
-  transform: translate(0px, 290px);
- 
-}
-
-}
 /* stars */
 
 .starry-background {
@@ -900,3 +814,293 @@ form button:hover {
     50% { opacity: 0; }
   }
 
+/* Add this class for when you want to stop the blink */
+.cursor.stop-blink {
+  animation: none;
+  visibility: hidden;
+}
+
+/* button for pages */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(45deg, #9c2bff, #ff41f9);
+  border-radius: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.custom-button:hover {
+  background: linear-gradient(45deg, #ff41f9, #9c2bff);
+  transform: translateY(-5px);
+}
+
+.custom-button:active {
+  background: linear-gradient(45deg, #c32bff, #41ffa3);
+  transform: translateY(0);
+}
+
+/* mobile compatibility */
+@media only screen and (max-width: 425px) {
+
+
+
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  
+  }
+
+  .counter .count {
+    /* font-size: 3em; */
+    font-size: 40px;
+   
+  }
+  .counter .count2 {
+    /* font-size: 3em; */
+    font-size: 40px;
+
+  }
+  
+
+  .counter-section {
+    padding: 0px 0px;
+  }
+  .grid-container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  /* header h1 {
+    font-size: 2em;
+} */
+
+header {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+/* change orbit ratio based on mobile
+.tiktok {
+  animation: orbit 4s linear infinite;
+}
+
+.instagram {
+  animation: orbit 4s linear infinite;
+  animation-delay: -1.34s; /* Start 1/3 way through TikTok's orbit */
+/* }
+
+.youtube {
+  animation: orbit 4s linear infinite;
+  animation-delay: -2.67s; /* Start 2/3 way through TikTok's orbit */
+
+
+
+.orbit img {
+  width: 75%;
+  height: auto;
+  transform: translate(0px, -60px);
+}
+.central-image {
+  width: 20%;
+  height: auto;
+  transform: translate(0px, -50px);
+  
+  
+}
+
+@keyframes orbit {
+  0% {
+      transform: rotate(0deg) translateX(80px) rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg) translateX(80px) rotate(-360deg);
+  }
+}
+
+.custom-button {
+  padding: 0px 2.5px;
+}
+.p {
+  position: relative;
+  z-index: 10; 
+  padding: 0px 2px;
+  
+}
+
+
+.content-section {
+  width: 100%;
+  padding: 0px 0px;
+  margin: 0px, 0px, 0px;
+
+}
+header {
+  padding: 0px, 0px;
+
+}
+h1 .planet-kosmos {
+  font-size: 45px;
+  font-family: 'Orbitron';
+}
+/* modules */
+.module {
+  display: flex;
+  align-items: center;
+  background-color: #2c3e50;
+  border-radius: 15x;
+  padding: 20px;
+  margin: 20px;
+  transform: translateX(-30px); /* Move 50px left */
+
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  color: white;
+  transform: translatex(-500);
+  transition: transform 0.3s ease;
+}
+
+.module img {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+}
+
+/* module styling */
+ /* Main module styling */
+ .module {
+  display: flex;
+  align-items: center;
+  background-color: #2c3e50;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  width: 95%;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.module:hover {
+  transform: scale(1.05);
+}
+
+/* Image on the left */
+.module img {
+  border-radius: 10px;
+  width: flex;
+  height: 100px;
+  margin-right: 20px;
+}
+
+/* Text on the right */
+.module .text-content {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Popup styling */
+.popup {
+  display: none;
+  position: fixed;
+  transform: translate(0%, -100%);
+
+  background-color: #34495e;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 95%;
+  color: white;
+  z-index: 1000;
+}
+
+
+/* Close button styling */
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+/* Overlay for background when popup is active */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* photowheel */
+.photo-wheel {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex; /* Add flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  overflow: hidden;
+}
+.photo-slide {
+  position: center;
+  height: 300px;
+  width: auto;
+  display: none;
+}
+.photo-slide.active {
+  display: block;
+}
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 18px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+/* CSS rule to hide Module 4 on aboutme.html */
+body.about-page #infoModule4,
+body.about-page #closepopup4,
+body.about-page #overlay4,
+body.about-page #popup4 {
+    display: none;
+}

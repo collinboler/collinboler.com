@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="author" content="" />
-    
     <title>Collin Boler</title>
     <link rel="icon" type="image/x-icon" href="images/cb2.png" />
      <!-- Favicon-->
-    
      <!-- Favicon-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Planet+Kosmos&display=swap" rel="stylesheet"> -->
@@ -19,10 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
     <script src="script.js" defer></script>
-  
 </head>
 <body>
-
     <div class="top-right">
         <div class="menu-toggle" id="menuToggle">
             <span></span>
@@ -34,32 +29,23 @@
             <a href="experience.html">Experience</a>
             <a href="projects.html">Projects</a>
             <a href="aboutme.html">About Me</a>
-            <!-- <a href="contact.html">Contact Me!</a> -->
-            
-
         </div>
     </div>
     <div class="top-left">
         <img src="images/cb2.png" alt="Home" id="homeButton">
     </div>
-
     <div class="starry-background"></div>
-
     <header>
         <h1>
-            <span class="planet-kosmos">Welcome!</span>
+            <span class="planet-kosmos">Projects</span>
         </h1>
         <div class="content-section">
         <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
-
-
         <script>
             // First typewriter effect in the header
             var i = 0;
-            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athlete</a> 
-                       at <span style='color: orange;'>Princeton University</span>.  
-                       Explore the site to learn more <a href="aboutme.html" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="experience.html" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and my <a href="projects.html" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
-            var speed = 5;
+            var txt = "Check out some projects I've been working on in my spare time!";
+            var speed = 50;
         
             function typeWriter() {
                 if (i < txt.length) {
@@ -92,18 +78,78 @@
 
 
     <div class="button-container">
+        <a href="index.html" class="custom-button">Home</a>
         <a href="aboutme.html" class="custom-button">About Me</a>
         <a href="experience.html" class="custom-button">Experience</a>
-        <a href="projects.html" class="custom-button">Projects</a>
     </div>
-
-    <div class="content-section typewriter-section">
-        <p id="next-text" style="font-family: 'Orbitron'; color: white;"></p>
-    </div>
-
-    
-     
         </section>
+                    <!-- overlay 1 -->
+            <div class="module" id="infoModule1">
+                <img src="images/tffrs.jpg" alt="Image">
+                <div class="text-content">
+                    <h3><str>Tfrrs Cutoff and Scratch Prediction Algorithm</str></h3>
+                    <p style="font-family: 'Arial', sans-serif; font-size: 12px !important;">Algorithm developed in java after watching my teammates spend hours manually checking through hundreds of tfrrs profiles for potential scratches!</p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay1"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup1">
+                <span class="close-btn" id="closePopup1">&times;</span>
+                <h3>Tfrrs Cutoff and Scratch Prediction Algorithm</h3>
+                <p style="font-family: 'Arial', sans-serif; font-size: 12px !important;">Last spring, I realized that all of my teammates were spending hours trying to manually 
+                    deduce who would scratch (not compete) from the First Rounds of the NCAA Championships. I decided to develop an algorithm and code a program that automatically outputs the 
+                    predicted scratches from each event and what the cutoff time will be. The algorithm ended up being almost perfect for deducing cutoff times! I plan to add even more functionality, 
+                    like webscraping from each tfrrs profile to check for injuries, and an advanced user interface as we get closer to the Track Season. Stay tuned! Check out it's <a href="https://github.com/collinboler/tffrspredict">repoistory</a> if you're interested! </p>
+            </div>
+
+            <!-- overlay 2 -->
+            <div class="module" id="infoModule2">
+                <img src="images/dealornodeal.jpeg" alt="Image">
+                <div class="text-content">
+                    <h3><str>Deal or No Deal Simulator and Analytics</str></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Simulator and Strategic Analysis for the popular game show "Deal or No Deal"</p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay2"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup2">
+                <span class="close-btn" id="closePopup2">&times;</span>
+                <h3>Deal or No Deal Simulator and Analytics</h3>
+                <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Built with 100% java. Allows players to run individual games and simulations the popular Game Show "Deal or No Deal" through their terminal's command line. Includes robust analytics built in. Run over 1,000,000 games on various "Risk Factors" in order to find out the best strategy.. Check out it's <a href="https://github.com/cboler13/Deal-or-No-Deal-Strategic-Analysis">Github</a>.</p>
+            </div>
+
+            <!-- overlay 3 (New Module) -->
+            <div class="module" id="infoModule3">
+                <img src="images/socialmedia.jpg" alt="Image">
+                <div class="text-content">
+                    <h3>Social Media Content Generator</h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Python script that automatically produces short-form content for social media. Generated $50+ in revenue. </p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay3"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup3">
+                <span class="close-btn" id="closePopup3">&times;</span>
+                <h3>Social Media Content Generator</h3>
+                <p style="font-family: 'Arial', sans-serif; font-size: 14px !important;">Built with Python. Uses various APIs to automatically 
+                    mass produce viral social media "quiz" videos from start to finish. GitHub is private for now because I plan to turn it into an SAAS (Software as a Service). If you'd like to view, contact me and I'll invite you!  </p>
+            </div>
+            <!-- overlay 4  -->
+            <div class="module" id="infoModule4">
+                <img src="images/cb2.png" alt="Image">
+                <div class="text-content">
+                    <h3><str>This Website</str></h3>
+                    <p style="font-family: 'Arial', sans-serif; font-size: 14px !important;">The site you're on right now! (Mostly) mobile friendly Static site with just JS, HTML, and CSS hosted on Netlify.</p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay4"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup4">
+                <span class="close-btn" id="closePopup4">&times;</span>
+                <h3>This website</h3>
+                <p style="font-family: 'Arial', sans-serif; font-size: 14px !important;">Static Site built with Javascript, HTML, and CSS deployed with Netlify and connected to collinboler.com via name servers. Includes an AI ChatBot trained on my resume and is (mostly) mobile friendly and responsive! Allowed me to hone my front end skills, practice api calls, customize tailored chatbots, and more! This site probably won't stay static forever, I'm planning on moving it to Node.js soonish. The repo is private for now, but I'll post the repository link as soon as I'm done!</p>
+            </div>
+
         <!-- <section class="content"> -->
             <!-- <div class="content-section"> -->
                 <h1>
@@ -131,12 +177,11 @@
                     </div>
             </div>
         </h1>
-            <!-- </section> -->
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
         
             <p style="font-family: 'Arial', sans-serif; font-size: 12px; color: white; !important;">© 2024 by Collin Boler. All Rights Reserved.</p>
 

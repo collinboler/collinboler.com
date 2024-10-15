@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="author" content="" />
-    
     <title>Collin Boler</title>
     <link rel="icon" type="image/x-icon" href="images/cb2.png" />
      <!-- Favicon-->
-    
      <!-- Favicon-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Planet+Kosmos&display=swap" rel="stylesheet"> -->
@@ -19,10 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
     <script src="script.js" defer></script>
-  
 </head>
 <body>
-
     <div class="top-right">
         <div class="menu-toggle" id="menuToggle">
             <span></span>
@@ -34,32 +29,23 @@
             <a href="experience.html">Experience</a>
             <a href="projects.html">Projects</a>
             <a href="aboutme.html">About Me</a>
-            <!-- <a href="contact.html">Contact Me!</a> -->
-            
-
         </div>
     </div>
     <div class="top-left">
         <img src="images/cb2.png" alt="Home" id="homeButton">
     </div>
-
     <div class="starry-background"></div>
-
     <header>
         <h1>
-            <span class="planet-kosmos">Welcome!</span>
+            <span class="planet-kosmos">Experience</span>
         </h1>
         <div class="content-section">
         <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
-
-
         <script>
             // First typewriter effect in the header
             var i = 0;
-            var txt = `Hi! I'm Collin Boler, a <a href="https://goprincetontigers.com/sports/mens-track-and-field/roster/collin-boler/23354" target="_blank" style="color: cyan; text-decoration: none;">student athlete</a> 
-                       at <span style='color: orange;'>Princeton University</span>.  
-                       Explore the site to learn more <a href="aboutme.html" target="_blank" style="color: cyan; text-decoration: none;">about me</a>, my studies, my <a href="experience.html" target="_blank" style="color: cyan; text-decoration: none;">experience</a>, and my <a href="projects.html" target="_blank" style="color: cyan; text-decoration: none;">projects!</a>`;
-            var speed = 5;
+            var txt = "Check out how I've spent the last few summers!";
+            var speed = 50;
         
             function typeWriter() {
                 if (i < txt.length) {
@@ -92,18 +78,110 @@
 
 
     <div class="button-container">
+        <a href="index.html" class="custom-button">Home</a>
         <a href="aboutme.html" class="custom-button">About Me</a>
-        <a href="experience.html" class="custom-button">Experience</a>
         <a href="projects.html" class="custom-button">Projects</a>
     </div>
-
-    <div class="content-section typewriter-section">
-        <p id="next-text" style="font-family: 'Orbitron'; color: white;"></p>
-    </div>
-
-    
-     
         </section>
+            <!-- overlay 1 -->
+            <div class="module" id="infoModule1">
+                <img src="images/1440.io2.jpg" alt="Image">
+                <div class="text-content">
+                    <h3><str>Software Engineering Intern, <span style='color: black;'>1440.io</span><h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Park City Utah | <i>June - August 2024</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay1"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup1">
+                <span class="close-btn" id="closePopup1">&times;</span>
+                <h3 style="text-align: left">Software Engineering Intern, 1440.io | <i>June - August 2024</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px; padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Contributed to the development and maintenance of Salesforce-based applications for clients including Lowe's, Formula One, Estée Lauder, and Lego. 
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Helped improve the user interface and functionality of a Salesforce integrated web app that allows clients to communicate with customers in different languages in real time. Implemented software improvements in response to client feedback by engineering solutions in Javascript, HTML/CSS, Apex, and SQL.  
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Helped design and perform tests to ensure quality assurance for products in development. Updated documentation for code maintainability.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 2 -->
+            <div class="module" id="infoModule4">
+                <img src="images/greenmountain.webp" alt="Image">
+                <div class="text-content">
+                    <h3>Camp Counselor, <span style='color:  rgb(88, 228, 57);'>Green Mountain Running Camp</span></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Meriden, NH | <i>July 2023</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay4"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup4">
+                <span class="close-btn" id="closePopup4">&times;</span>
+                <h3 style="text-align: left">Camp Counselor, Green Mountain Running Camp | <i>July 2023</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Ensured the safety and wellbeing of campers at all times.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Responded to emergencies and unexpected situations calmly and effectively. 
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 3 (New Module) -->
+
+            <div class="module" id="infoModule2">
+                <img src="images/nys.jpeg" alt="Image">
+                <div class="text-content">
+                    <h3 style="text-align: left">Head Lifeguard, <span style='color: rgb(49, 87, 130);'>NYS Pool Management</span></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left;  font-size: 14px !important;">NJ | <i>Summers '22 and '23</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay2"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup2">
+                <span class="close-btn" id="closePopup2">&times;</span>
+                <h3 style="text-align: left">Head Lifeguard, NYS Pool Management | <i>Summers '22 and '23</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Monitored pools and maintained safety. Maintained records of pool usage, incidents, chemical incidents, and maintenance activities.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Addressed customer concerns, enforced rules.                     
+                    </li>
+                </ul>
+            </div>
+
+            <!-- overlay 4 (New Module) -->
+            <div class="module" id="infoModule3">
+                <img src="images/chopt.png" alt="Image">
+                <div class="text-content">
+                    <h3 style="text-align: left">Salad Maker/Team Member, <span style='color:  rgb(7, 107, 109);'>Chop't Salad Co</span></h3></h3>
+                    <p style="font-family: 'Arial', sans-serif; text-align: left;  font-size: 14px !important;">New Providence, NJ | <i>July 2021 - September 2021</i></p>
+                </div>
+            </div>
+            <div class="overlay" id="overlay3"></div>
+             <!-- Popup module -->
+             <div class="popup" id="popup3">
+                <span class="close-btn" id="closePopup3">&times;</span>
+                <h3 style="text-align: left">Salad Maker/Team Member, Chop't Salad Co | <i>July - September 2021</i></h3>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px;  padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Engaged with customers, took orders, answered questions about the menu, made salads and other menu items to order in front of customers, handled payment transactions. 
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Prepared ingredients, maintained cleanliness, managed inventory, and worked as part of a team. 
+                    </li>
+                </ul>
+            </div>
+
+
+           
+           
         <!-- <section class="content"> -->
             <!-- <div class="content-section"> -->
                 <h1>
@@ -131,12 +209,11 @@
                     </div>
             </div>
         </h1>
-            <!-- </section> -->
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
         
             <p style="font-family: 'Arial', sans-serif; font-size: 12px; color: white; !important;">© 2024 by Collin Boler. All Rights Reserved.</p>
 

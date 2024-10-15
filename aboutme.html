@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Collin Boler</title>
+    <link rel="icon" type="image/x-icon" href="images/cb2.png" />
+     <!-- Favicon-->
+     <!-- Favicon-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Planet+Kosmos&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <body class="about-page">
+    <div class="top-right">
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="index.html" class="custom-button">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+        </div>
+    </div>
+    <div class="top-left">
+        <img src="images/cb2.png" alt="Home" id="homeButton">
+    </div>
+    <div class="starry-background"></div>
+    <header>
+        <h1>
+            <span class="planet-kosmos">About Me</span>
+        </h1>
+        <div class="content-section">
+        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
+
+            <script>
+                // First typewriter effect in the header
+                var i = 0;
+                var txt = "Scroll down to learn about what I love to do outside of the classroom!";
+                var speed = 50;
+            
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                    function stopCursorBlink() {
+                        const cursor = document.querySelector('.cursor');
+                        if (cursor) {
+                            cursor.classList.add('stop-blink'); // Add class to stop blinking
+                        }
+                    }
+                    
+                    // Stop the blinking cursor after 5 seconds
+                    setTimeout(stopCursorBlink, 7500); // 5000ms = 5 seconds
+                }
+                
+                document.addEventListener("DOMContentLoaded", function () {
+                
+                    // Start the first typewriter effect immediately
+                    typeWriter();
+                });
+            </script>
+    
+
+        <div class="button-container">
+            <a href="index.html" class="custom-button">Home</a>
+            <a href="experience.html" class="custom-button">Experience</a>
+            <a href="projects.html" class="custom-button">Projects</a>
+        </div>
+    
+            <!-- overlay 1 -->
+            <div class="module" id="infoModule1">
+                <img src="images/hepsindoor.jpg" alt="Image">
+                <div class="text-content">
+                    <h3><span style='text-align: left; color: rgb(255, 89, 0);'>Track / Cross Country</span><h3>
+                </div>
+            </div>
+            <div class="overlay" id="overlay1"></div>
+            <!-- Popup module -->
+            <div class="popup" id="popup1">
+                <span class="close-btn" id="closePopup1">&times;</span>
+                <h3 style="text-align: left">Princeton Varsity Track and Field and Cross County</i></h3>
+                <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Track is a HUGE part of my life! I spend upwards of 20-30 hours a week training to be the best I can be for my team!</p>
+                <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;"><str>Here's some of my favorite moments and accolades running at Princeton so far:</str></p>
+                <ul style="font-family: 'Arial', sans-serif; font-size: 12px; padding-right: 80px; text-align: left;">
+                    <li style="margin-bottom: 10px;">
+                        Ran a PR of 3:41.21 in the 1500 last spring, which converts to a 3:58 Mile!
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Earned First Team All-Ivy three times, in the 1,000m, indoor 4x800m relay, and outdoor 4x800m relay!
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Contributed to our team's <i>Triple Crown,</i> a feat achieved when our team wins the Cross Country, Indoor, and Outdoor Heptagonal (Ivy League) Championships for the year.
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Qualifed for the First Round of the Outdoor NCAA Championships in Kentucky for the 1500, and advanced to the Quarter Final round. 
+                    </li>
+                </ul>
+                <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">I've gained many lifelong friends from running, and many beneficial habits and values have been instilled in me, like discipline, teamwork, patience, and coachibility.</p>
+            </div>
+    <!-- Popup module -->
+    <div class="popup" id="popup1">
+        <span class="close-btn" id="closePopup1">&times;</span>
+        <h3 style="text-align: left">Princeton Varsity Track and Field and Cross County</i></h3>
+        <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">Track is a HUGE part of my life! I spend upwards of 20-30 hours a week training to be the best I can be for my team!</p>
+        <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;"><str>Here's some of my favorite moments and accolades running at Princeton so far:</str></p>
+        <ul style="font-family: 'Arial', sans-serif; font-size: 12px; padding-right: 80px; text-align: left;">
+            <li style="margin-bottom: 10px;">
+                Ran a PR of 3:41.21 in the 1500 last spring, which converts to a 3:58 Mile!
+            </li>
+            <li style="margin-bottom: 10px;">
+                Earned First Team All-Ivy three times, in the 1,000m, indoor 4x800m relay, and outdoor 4x800m relay!
+            </li>
+            <li style="margin-bottom: 10px;">
+                Contributed to our team's <i>Triple Crown,</i> a feat achieved when our team wins the Cross Country, Indoor, and Outdoor Heptagonal (Ivy League) Championships for the year.
+            </li>
+            <li style="margin-bottom: 10px;">
+                Qualifed for the First Round of the Outdoor NCAA Championships in Kentucky for the 1500, and advanced to the Quarter Final round. 
+            </li>
+        </ul>
+        <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">I've gained many lifelong friends from running, and many beneficial habits and values have been instilled in me, like discipline, teamwork, patience, and coachibility.</p>
+    </div>
+
+    <!-- overlay 2 -->
+    <div class="module" id="infoModule2">
+        <img src="images/lakemountain.jpg" alt="Image">
+        <div class="text-content">
+            <h3><span style='color:  rgb(88, 228, 57);'>Photography</span></h3>
+        </div>
+    </div>
+    <div class="overlay" id="overlay2"></div>
+    <!-- Popup module -->
+    <div class="popup" id="popup2">
+        <span class="close-btn" id="closePopup2">&times;</span>
+        <h3 style="text-align: left">Photography</i></h3>
+        <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">I've been really into photography ever since my Dad let me borrow his old Nikon D5100. I like shooting natural landscapes, wildlife, and action shots!</p>
+        <div id="photo-slider-container-1"></div>
+
+    </div>
+    
+    <!-- overlay 3 (New Module) -->
+
+    <div class="module" id="infoModule3">
+        <img src="images/surfbri.jpg" alt="Image">
+        <div class="text-content">
+            <h3 style="text-align: left"><span style='color: rgb(0, 221, 255);'>Surfing</span></h3>
+        </div>
+    </div>
+    <div class="overlay" id="overlay3"></div>
+    <!-- Popup module -->
+    <div class="popup" id="popup3">
+        <span class="close-btn" id="closePopup3">&times;</span>
+        <h3 style="text-align: left">Surfing</i></h3>
+        <p style="font-family: 'Arial', sans-serif; text-align: left; font-size: 14px !important;">My Dad is an avid surfer, and taught me how to conquer the waves of the Jersey Shore from a young age. I love to hit the waves whenever possible, even in the dead of winter! </p>
+        <div id="photo-slider-container-2"></div>
+
+    </div>
+ 
+    <!-- -->
+
+    <!--overlay 4 (New Module)-->
+    <div class="module" id="infoModule4">
+      
+           
+      
+    </div>
+    <div class="overlay" id="overlay4"></div>
+     <!-- Popup module -->
+     <div class="popup" id="popup4">
+        <span class="close-btn" id="closePopup4">&times;</span>
+    </div>
+
+     
+        </section>
+           
+        <!-- <section class="content"> -->
+            <!-- <div class="content-section"> -->
+                <h1>
+            <div class="content-section">
+                <div class="container" >
+                        <img src="images/pause.png" alt="Central Image" class="central-image">
+                        <div class="orbit linkedin">
+                            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
+                            <img src="images/linkedin.webp" alt="LinkedIn's Logo">
+                                </a>
+                        </div>
+                    
+                        <div class="orbit gmail">
+                            <a href="mailto:cb6256@princeton.edu">
+                                <img src="images/gmail.png" target="_blank" alt="Gmail's Logo" >
+                            </a>
+                        </div>
+                        <div class="orbit github">
+                            <a href="https://github.com/collinboler" target="_blank">
+                                
+                            <img src="images/github.png" target="_blank" alt="Github's Logo" >
+                            </a>
+
+                        </div>
+                    </div>
+            </div>
+        </h1>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+        <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
+
+        
+            <p style="font-family: 'Arial', sans-serif; font-size: 12px; color: white; !important;">© 2024 by Collin Boler. All Rights Reserved.</p>
+
+        </header>
+    
+
+        <script>
+            window.onload = function () {
+                window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
+                window.scrollTo(0, 0); // Scroll to the top of the page
+              
+                function startCountUp(id, endValue) {
+                    return new Promise((resolve, reject) => {
+                        var countUp = new CountUp(id, 0, endValue);
+                        if (!countUp.error) {
+                            countUp.start(resolve);
+                        } else {
+                            console.error(countUp.error);
+                            reject(countUp.error);
+                        }
+                    });
+                }
+                let options = {
+                      duration: 1,
+                };
+                Promise.all([
+                startCountUp('followers-counter', 13000000),
+                startCountUp('views-counter', 250000)
+            ]).then(() => {
+                console.log('Both counters have finished');
+                document.getElementById('followers-text').classList.add('visible');
+                document.getElementById('views-text').classList.add('visible');
+                document.getElementById('followers-counter').textContent += '+';
+                document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
+            }).catch(error => {
+                console.error('Error starting counters:', error);
+            });
+        };
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h3>Collin's ChatBot</h3>
+         <p id="displayArea">The variable value will appear here.</p>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there! I'm Collin's ChatBot<br><strong>Have any questions about Collin Boler?</strong></p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+ 
+
+</body>
+</html>
