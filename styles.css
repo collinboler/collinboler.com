@@ -397,7 +397,7 @@ header p {
     position: relative;
     text-align: center;
     color: #fff;
-    background: linear-gradient(45deg, #ff41f9, #9c2bff);;
+    background: linear-gradient(45deg, #ff41f9, #9c2bff);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   .chatbot header span {
@@ -535,13 +535,10 @@ header p {
   
 */
 
-button,
-select {
-  text-transform: none;
-}
+/* pointer send btn */
 
-[role=button] {
-  cursor: pointer;
+#send-btn {
+  color: #000000;
 }
 
 
