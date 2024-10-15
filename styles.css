@@ -535,6 +535,16 @@ header p {
   
 */
 
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+
 .container {
   position: relative;
   /* width: 400px; */
