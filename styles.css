@@ -413,7 +413,7 @@ header p {
   }
   .chatbot .chatbox {
     overflow-y: auto;
-    height: 510;
+    height: 480px; /* used to be 510px */
     padding: 30px 20px 100px;
   }
   .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
@@ -491,7 +491,7 @@ header p {
     align-self: flex-end;
     color: linear-gradient(45deg, #ff41f9, #9c2bff);;
     cursor: pointer;
-    height: 25px;
+    height: 55px;
     display: flex;
     align-items: center;
     visibility: hidden;
@@ -525,8 +525,16 @@ header p {
     }
   }
 
+/*
+  not neccessary?
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+*/
 
-/* gold mining */
 .container {
   position: relative;
   /* width: 400px; */
@@ -860,7 +868,11 @@ form button:hover {
 @media only screen and (max-width: 425px) {
 
 
+  .chatbot .chatbox {
+  
+    height: 510px; /* make sure mobile height stays the same */
 
+  }
   .counter-container {
     display: flex;
     flex-direction: column;
