@@ -478,7 +478,7 @@ header p {
     border-top: 1px solid #ddd;
   }
   .chat-input textarea {
-    height: 25px;
+    height: 55px;
     width: 100%;
     border: none;
     outline: none;
