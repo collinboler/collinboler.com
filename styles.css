@@ -1040,12 +1040,12 @@ h1 .planet-kosmos {
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Popup styling */
+
+
 .popup {
   display: none;
   position: fixed;
   transform: translate(0%, -100%);
-
   background-color: #34495e;
   padding: 30px;
   border-radius: 20px;
@@ -1054,7 +1054,9 @@ h1 .planet-kosmos {
   color: white;
   z-index: 1000;
 }
-
+.popup-one {
+  transform: translate(0%, -50%);
+}
 
 /* Close button styling */
 .popup .close-btn {
@@ -1066,6 +1068,8 @@ h1 .planet-kosmos {
   font-size: 18px;
   z-index: 1000;
 }
+
+
 
 /* Overlay for background when popup is active */
 .overlay {

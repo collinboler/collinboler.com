@@ -395,6 +395,7 @@ overlay1.onclick = function() {
     overlay1.style.display = 'none';
 };
 
+
 // Popup 2
 const infoModule2 = document.getElementById('infoModule2');
 const popup2 = document.getElementById('popup2');
