@@ -1023,6 +1023,13 @@ h1 .planet-kosmos {
   transition: transform 0.3s ease;
 }
 
+.module-three{
+  display: none;
+}
+.module-four{
+  display: none;
+}
+
 .module:hover {
   transform: scale(1.05);
 }
@@ -1056,6 +1063,9 @@ h1 .planet-kosmos {
 }
 .popup-one {
   transform: translate(0%, -50%);
+}
+.popup-two {
+  transform: translate(0%, -90%);
 }
 
 /* Close button styling */
