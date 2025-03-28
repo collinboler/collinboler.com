@@ -138,7 +138,7 @@ Languages: English, Spanish (Proficient)"
 
 let userMessage = null; // Variable to store user's message
 let conversationHistory = []; // Array to store conversation history
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = process.env.OPENAI_API_KEY;
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
