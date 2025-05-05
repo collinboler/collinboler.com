@@ -59,13 +59,6 @@ const sendChatBtn = document.querySelector(".chat-input span");
 // Collect the browser locale
 let BROWSWER_LOCALE = navigator.language || navigator.userLanguage;
 
-
-
-let displayElement = document.getElementById('displayArea');
-
-// Set the innerHTML of the element to the value of the variable
-displayElement.innerHTML = BROWSWER_LOCALE;
-
 // Get the current page URL
 var CURRENT_PAGE = window.location.href;
 
@@ -101,7 +94,7 @@ Helped design and perform tests to ensure quality assurance for products in deve
 Camp Counselor, Green Mountain Running Camp | Meriden, NH		                       July 2023 \
 Ensured the safety and wellbeing of campers at all times. Responded to emergencies and unexpected situations calmly and effectively. \
 \
-Salad Maker/Team Member, Chop’t Salad Co | New Providence, NJ   	            Summer/Early Fall 2021 \
+Salad Maker/Team Member, Chop't Salad Co | New Providence, NJ   	            Summer/Early Fall 2021 \
 Engaged with customers, took orders, answered questions about the menu, made salads and other menu items to order in front of customers, handled payment transactions. Prepared ingredients, maintained cleanliness, managed inventory, and worked as part of a team. \
 \
 \
@@ -114,7 +107,7 @@ LEADERSHIP and  SERVICE \
 TryCan Peer Mentor | New Providence, NJ; Summit NJ \
 Mentored children with special needs during various seasonal sports clinics such as basketball and swimming. \
 Delbarton Lego Club Founder | Morristown, NJ \
-Started the ‘Lego Club’ at Delbarton and grew the club to over 100 members. Organized and delivered charity collections for kids in need. \
+Started the 'Lego Club' at Delbarton and grew the club to over 100 members. Organized and delivered charity collections for kids in need. \
 \
 ATHLETIC ACHIEVEMENT \
 Princeton University Varsity Cross Country and Track and Field: Dedicate 20+ hours per week to practice and competition. School record holder in the 600m. Ran a PR of 3:41.21 in the 1500m (3:58 mile conversion) last spring. Ivy League Champion in the 1000m, as well as the indoor and outdoor 4x800m relays. Qualified for NCAA East First Round, advanced to the Quarter Finals. \
@@ -138,8 +131,47 @@ Languages: English, Spanish (Proficient)"
 
 let userMessage = null; // Variable to store user's message
 let conversationHistory = []; // Array to store conversation history
-const API_KEY = process.env.OPENAI_API_KEY;
-const inputInitHeight = chatInput.scrollHeight;
+let API_KEY = ""; // Will be loaded securely
+
+// Function to load API key securely
+async function loadApiKey() {
+    try {
+        // Method 1: Try to load from a separate config.js file that's gitignored
+        // This is more secure than embedding directly or loading a .env file in the browser
+        if (typeof OPENAI_API_KEY !== 'undefined') {
+            return OPENAI_API_KEY;
+        }
+        
+        // Method 2: Try to fetch from a secure endpoint (recommended approach)
+        // Your server would have the API key in its environment variables
+        // and would return it only to authenticated users
+        const response = await fetch('/api/getkey');
+        if (response.ok) {
+            const data = await response.json();
+            return data.apiKey;
+        }
+        
+        // Fallback for development only (NOT SECURE for production)
+        console.warn("Secure API key loading failed. Using fallback method.");
+        return "";
+    } catch (error) {
+        console.error("Error loading API key:", error);
+        return "";
+    }
+}
+
+// Initialize API key when DOM is loaded
+document.addEventListener("DOMContentLoaded", async function() {
+    API_KEY = await loadApiKey();
+    
+    // Hide debug element
+    const displayElement = document.getElementById('displayArea');
+    if (displayElement) {
+        displayElement.style.display = 'none';
+    }
+});
+
+const inputInitHeight = chatInput ? chatInput.scrollHeight : 0;
 
 const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
