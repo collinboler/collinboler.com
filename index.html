@@ -1,209 +1,73 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Collin Boler's personal site" />
-        <meta name="author" content="Collin Boler" />   
-        <title>Collin Boler</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="images/cb2.png" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="styles.css" rel="stylesheet" />
-        <meta charset="utf-8">
-        <title>Collin Boler's Personal Site</title>
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-        <script src="config.js"></script>
-        <script src="script.js" defer></script> <!-- what does defer mean?-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collin Boler's personal site" />
+    <meta name="author" content="Collin Boler" />
+    <title>Collin Boler</title>
+    <link rel="icon" type="image/x-icon" href="images/cb2.png" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="top-right">
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-            <a href="index.html">Home</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="aboutme.html">About Me</a>
-            <!-- <a href="contact.html">Contact Me!</a> -->
-            
-
-        </div>
-    </div>
     <div class="top-left">
-        <img src="images/cb2.png" alt="Home" id="homeButton">
+        <a href="index.html" class="home-link">home</a>
     </div>
 
-    <div class="starry-background"></div>
-
-    <header>
-        <h1>
-            <span class="planet-kosmos">Welcome!</span>
-        </h1>
-        <div class="content-section">
-        <p id="demo" style="font-family: 'Orbitron''; color: white;"></p>
-
-
-        <script>
-            // First typewriter effect in the header
-            var i = 0;
-            var txt = `Hi! I'm Collin Boler, a <span style="color: cyan;">student athlete</span> 
-                       at <span style='color: orange;'>Princeton University</span>.  
-                       Explore the site to learn more <span style="color: cyan;">about me</span>, my studies, my <span style="color: cyan;">experience</a>, and my <spanstyle="color: cyan;">projects!<spana>`;
-            var speed = 10;
+    <main class="main-content">
+        <h1 class="name">Collin Boler</h1>
         
-            function typeWriter() {
-                if (i < txt.length) {
-                    document.getElementById("demo").innerHTML = txt.substring(0, i+1) + "<span class='cursor'>|</span>";
-                    i++;
-                    setTimeout(typeWriter, speed);
-                }
-                function stopCursorBlink() {
-                    const cursor = document.querySelector('.cursor');
-                    if (cursor) {
-                        cursor.classList.add('stop-blink'); // Add class to stop blinking
-                    }
-                }
-                
-                // Stop the blinking cursor after 5 seconds
-                setTimeout(stopCursorBlink, 7500); // 5000ms = 5 seconds
-            }
+        <p class="bio">Student athlete at Princeton University studying Computer Science. I love building software that millions use.</p>
+        
+        <div class="links">
+            <a href="#" class="link-item">
+                <span class="external-icon">↗</span>
+                <span>resume</span>
+            </a>
+            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/" target="_blank" class="link-item">
+                <span class="external-icon">↗</span>
+                <span>linkedin</span>
+            </a>
+            <a href="mailto:cb6256@princeton.edu" class="link-item">
+                <span class="external-icon">↗</span>
+                <span>email</span>
+            </a>
+            <a href="https://github.com/collinboler" target="_blank" class="link-item">
+                <span class="external-icon">↗</span>
+                <span>github</span>
+            </a>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Featured Projects</h2>
             
-           
-        
-            document.addEventListener("DOMContentLoaded", function () {
-            
-        
-              
-        
-                // Start the first typewriter effect immediately
-                typeWriter();
-            });
-        </script>
-
-
-    <div class="button-container">
-        <a href="aboutme.html" class="custom-button">About Me</a>
-        <a href="experience.html" class="custom-button">Experience</a>
-        <a href="projects.html" class="custom-button">Projects</a>
-    </div>
-
-    <div class="content-section typewriter-section">
-        <p id="next-text" style="font-family: 'Orbitron'; color: white;"></p>
-    </div>
-
-    
-     
-        </section>
-        <!-- <section class="content"> -->
-            <!-- <div class="content-section"> -->
-                <h1>
-            <div class="content-section">
-                <div class="container" >
-                        <img src="images/pause.png" alt="Central Image" class="central-image">
-                        <div class="orbit linkedin">
-                            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/">
-                            <img src="images/linkedin.webp" alt="LinkedIn's Logo">
-                                </a>
-                        </div>
-                    
-                        <div class="orbit gmail">
-                            <a href="mailto:cb6256@princeton.edu">
-                                <img src="images/gmail.png" target="_blank" alt="Gmail's Logo" >
-                            </a>
-                        </div>
-                        <div class="orbit github">
-                            <a href="https://github.com/collinboler" target="_blank">
-                                
-                            <img src="images/github.png" target="_blank" alt="Github's Logo" >
-                            </a>
-
-                        </div>
-                    </div>
+            <div class="project">
+                <h3 class="project-title">AI GeoGuessr Hacker</h3>
+                <p class="project-description">
+                    <span class="highlight">1,000+ downloads, 500 weekly active users</span>. Chrome extension that uses OpenAI's Vision API to analyze GeoGuessr screenshots and predict locations with coordinates displayed on an interactive map.
+                </p>
             </div>
-        </h1>
-            <!-- </section> -->
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p>     
-            <p> &nbsp;&nbsp;&nbsp;&nbsp; </p> 
-        
-            <p style="font-family: 'Arial', sans-serif; font-size: 12px; color: white; !important;">© 2024 by Collin Boler. All Rights Reserved.</p>
 
-        </header>
-    
+            <div class="project">
+                <h3 class="project-title">Tfrrs Scratch Prediction Algorithm</h3>
+                <p class="project-description">
+                    Java program that predicts which contestants will scratch from NCAA Championship First Rounds, helping my team save hours of manual analysis.
+                </p>
+            </div>
+        </section>
 
-        <script>
-            window.onload = function () {
-                window.history.scrollRestoration = 'manual'; // Disable automatic scroll restoration
-                window.scrollTo(0, 0); // Scroll to the top of the page
-              
-                function startCountUp(id, endValue) {
-                    return new Promise((resolve, reject) => {
-                        var countUp = new CountUp(id, 0, endValue);
-                        if (!countUp.error) {
-                            countUp.start(resolve);
-                        } else {
-                            console.error(countUp.error);
-                            reject(countUp.error);
-                        }
-                    });
-                }
-                let options = {
-                      duration: 1,
-                };
-                Promise.all([
-                startCountUp('followers-counter', 13000000),
-                startCountUp('views-counter', 250000)
-            ]).then(() => {
-                console.log('Both counters have finished');
-                document.getElementById('followers-text').classList.add('visible');
-                document.getElementById('views-text').classList.add('visible');
-                document.getElementById('followers-counter').textContent += '+';
-                document.getElementById('views-counter').textContent = '$' + document.getElementById('views-counter').textContent + '+';
-            }).catch(error => {
-                console.error('Error starting counters:', error);
-            });
-        };
-        </script>
-      <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core theme JS-->
- <!-- chatbot start-->  
-  <script src="scripts.js"></script>    
+        <section class="section">
+            <h2 class="section-title">Past Work</h2>
+            
+            <div class="work-item">
+                <h3 class="work-title">1440.io - Software Engineering Intern</h3>
+                <p class="work-description">
+                    Contributed to Salesforce-based applications for clients including Lowe's, Formula One, Estée Lauder, and Lego. Improved UI and functionality of a real-time multilingual customer communication web app.
+                </p>
+            </div>
+        </section>
+    </main>
 
-    <button class="chatbot-toggler">
-      <span class="material-symbols-rounded">mode_comment</span>
-      <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-      <header>
-        <h3>Collin's ChatBot</h3>
-         <p id="displayArea">The variable value will appear here.</p>
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined">smart_toy</span>
-          <p>Hi there! I'm Collin's ChatBot<br><strong>Have any questions about Collin Boler?</strong></p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
-    </div>
-
+    <script src="script.js" defer></script>
 </body>
 </html>
