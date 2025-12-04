@@ -1,73 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Collin Boler's personal site" />
     <meta name="author" content="Collin Boler" />
     <title>Collin Boler</title>
     <link rel="icon" type="image/x-icon" href="images/cb2.png" />
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="top-left">
-        <a href="index.html" class="home-link">home</a>
+    <div class="grid-bg"></div>
+    <div class="grid-glow" id="gridGlow"></div>
+    <div class="container">
+        <nav>
+            <a href="index.html">home</a>
+        </nav>
+
+        <main>
+            <header class="header-with-photo">
+                <div class="header-content">
+                    <h1>Collin Boler</h1>
+                    <p class="bio">
+                        Junior at Princeton University studying Computer Science with a minor in Statistics and Machine Learning.<br>
+                        I love building software and running fast.
+                    </p>
+                    <div class="links">
+                        <a href="resume.pdf" target="_blank">↗ resume</a>
+                        <a href="https://www.linkedin.com/in/collin-boler-8599b5263/" target="_blank">↗ linkedin</a>
+                        <a href="https://github.com/collinboler" target="_blank">↗ github</a>
+                        <a href="mailto:collinboler@princeton.edu">↗ email</a>
+                    </div>
+                </div>
+                <div class="header-photo">
+                    <img src="collin.jpg" alt="Collin Boler">
+                </div>
+            </header>
+
+            <section>
+                <h2>Experience</h2>
+
+                <article>
+                    <h3>Credit Benchmark - Data Science Intern</h3>
+                    <p>
+                        <em class="highlight">Summer 2025.</em> Architected data pipeline to back-test 10 years of probability of default data from 40+ global banks on 110,000+ corporate entities. Published white paper on findings. Engineered ML model to forecast North American corporate credit trends.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>1440.io - Software Engineering Intern</h3>
+                    <p>
+                        <em class="highlight">Summer 2024.</em> Developed a customer outreach module integrating transcription, translation, speech synthesis, and response recommendations - boosting client productivity by over 50%. Built Salesforce applications for Lowe's, Formula 1, and LEGO.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+
+                <article>
+                    <h3>Social Media Video Generation Agent</h3>
+                    <p>
+                        <em class="highlight">$5,000 in grants.</em> Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrated into Sentient AGI's platform (2 million users).
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Computer Vision Geo-Location Chrome Extension</h3>
+                    <p>
+                        <em class="highlight">8,000+ downloads, 2,000+ weekly active users.</em> Chrome extension leveraging a computer vision model trained on 5 million images to predict precise geographic location of on-screen images.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Athletics</h2>
+
+                <article>
+                    <h3>Princeton Varsity Track & Cross Country</h3>
+                    <p>
+                        <em class="highlight">Sub-four minute miler. Division I All-American. Ivy League champion.</em> Princeton University record holder in the 600m. Commit 30+ hours weekly to training and competition.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Awards</h2>
+
+                <article>
+                    <h3>3rd Place - Sentient AGI Real Revenue Hackathon</h3>
+                    <p>
+                        Planned, developed, and launched a full-stack web application using Sentient's inference model to help small businesses save time on advertising.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>The Babb Trophy</h3>
+                    <p>
+                        Awarded annually to the freshman member of the track team who through sportsmanship, influence, and performance has contributed most to the sport at Princeton.
+                    </p>
+                </article>
+            </section>
+
+            <footer>
+                <p>© 2024 Collin Boler</p>
+            </footer>
+        </main>
     </div>
-
-    <main class="main-content">
-        <h1 class="name">Collin Boler</h1>
-        
-        <p class="bio">Student athlete at Princeton University studying Computer Science. I love building software that millions use.</p>
-        
-        <div class="links">
-            <a href="#" class="link-item">
-                <span class="external-icon">↗</span>
-                <span>resume</span>
-            </a>
-            <a href="https://www.linkedin.com/in/collin-boler-8599b5263/" target="_blank" class="link-item">
-                <span class="external-icon">↗</span>
-                <span>linkedin</span>
-            </a>
-            <a href="mailto:cb6256@princeton.edu" class="link-item">
-                <span class="external-icon">↗</span>
-                <span>email</span>
-            </a>
-            <a href="https://github.com/collinboler" target="_blank" class="link-item">
-                <span class="external-icon">↗</span>
-                <span>github</span>
-            </a>
-        </div>
-
-        <section class="section">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <div class="project">
-                <h3 class="project-title">AI GeoGuessr Hacker</h3>
-                <p class="project-description">
-                    <span class="highlight">1,000+ downloads, 500 weekly active users</span>. Chrome extension that uses OpenAI's Vision API to analyze GeoGuessr screenshots and predict locations with coordinates displayed on an interactive map.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3 class="project-title">Tfrrs Scratch Prediction Algorithm</h3>
-                <p class="project-description">
-                    Java program that predicts which contestants will scratch from NCAA Championship First Rounds, helping my team save hours of manual analysis.
-                </p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Past Work</h2>
-            
-            <div class="work-item">
-                <h3 class="work-title">1440.io - Software Engineering Intern</h3>
-                <p class="work-description">
-                    Contributed to Salesforce-based applications for clients including Lowe's, Formula One, Estée Lauder, and Lego. Improved UI and functionality of a real-time multilingual customer communication web app.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js" defer></script>
+    <script>
+        const glow = document.getElementById('gridGlow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+            glow.style.opacity = '1';
+        });
+        document.addEventListener('mouseleave', () => {
+            glow.style.opacity = '0';
+        });
+    </script>
 </body>
 </html>
