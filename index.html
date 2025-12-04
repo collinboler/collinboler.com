@@ -10,8 +10,7 @@
     <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="grid-bg"></div>
-    <div class="grid-glow" id="gridGlow"></div>
+    <div class="tile-grid" id="tileGrid"></div>
     <div class="container">
         <nav>
             <a href="index.html">home</a>
@@ -108,15 +107,39 @@
         </main>
     </div>
     <script>
-        const glow = document.getElementById('gridGlow');
-        document.addEventListener('mousemove', (e) => {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-            glow.style.opacity = '1';
-        });
-        document.addEventListener('mouseleave', () => {
-            glow.style.opacity = '0';
-        });
+        function createTiles() {
+            const grid = document.getElementById('tileGrid');
+            const tileSize = 80;
+            const cols = Math.ceil(window.innerWidth / tileSize) + 1;
+            const rows = Math.ceil(document.body.scrollHeight / tileSize) + 1;
+            
+            grid.innerHTML = '';
+            grid.style.setProperty('--cols', cols);
+            grid.style.height = (rows * tileSize) + 'px';
+            
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    const tile = document.createElement('div');
+                    tile.className = 'tile';
+                    
+                    // Calculate fade based on row (top to bottom) and col (left side)
+                    const rowFade = Math.min(row / 8, 1);
+                    const colFade = Math.max(0, 1 - (col / 4));
+                    const totalFade = Math.max(rowFade, colFade);
+                    
+                    tile.style.opacity = Math.max(0, 1 - totalFade);
+                    
+                    grid.appendChild(tile);
+                }
+            }
+        }
+        
+        createTiles();
+        window.addEventListener('resize', createTiles);
+        
+        // Recreate tiles when content changes height
+        const observer = new ResizeObserver(createTiles);
+        observer.observe(document.body);
     </script>
 </body>
 </html>
