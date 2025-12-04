@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Collin Boler's personal site" />
-    <meta name="author" content="Collin Boler" />
-    <title>Collin Boler</title>
+        <meta name="description" content="Collin Boler's personal site" />
+        <meta name="author" content="Collin Boler" />   
+        <title>Collin Boler</title>
     <link rel="icon" type="image/x-icon" href="cb.png" />
-    <link href="styles.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr Ur fi Lr zr ci Or jr capture Ai calculateEventProperties qr register register_once register_for_session unregister unregister_for_session Jr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Gr Br createPersonProfile Vr Cr Kr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Hr debug O Wr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
         posthog.init('phc_VCeJLAs5TGopxEBzvF8qVMkERfwNMlf18lEgXBKRO3Y', {
@@ -33,15 +33,15 @@
                         I like building stuff and running.
                     </p>
                     <div class="links">
-                        <a href="resume.pdf" target="_blank">↗ resume</a>
-                        <a href="https://www.linkedin.com/in/collinboler/" target="_blank">↗ linkedin</a>
-                        <a href="https://github.com/collinboler" target="_blank">↗ github</a>
-                        <a href="mailto:collinboler@princeton.edu">↗ email</a>
-                    </div>
-                </div>
+                        <a href="resume.pdf" target="_blank" onclick="posthog.capture('clicked_resume')">↗ resume</a>
+                        <a href="https://www.linkedin.com/in/collinboler/" target="_blank" onclick="posthog.capture('clicked_linkedin')">↗ linkedin</a>
+                        <a href="https://github.com/collinboler" target="_blank" onclick="posthog.capture('clicked_github')">↗ github</a>
+                        <a href="mailto:collinboler@princeton.edu" onclick="posthog.capture('clicked_email')">↗ email</a>
+        </div>
+    </div>
                 <div class="header-photo">
                     <img src="collin.jpg" alt="Collin Boler">
-                </div>
+    </div>
             </header>
 
             <section>
@@ -50,7 +50,7 @@
                 <article>
                     <h3>Credit Benchmark - Data Science Intern</h3>
                     <p>
-                        <em class="highlight">Summer 2025.</em> Architected data pipeline to back-test 10 years of probability of default data from 40+ global banks on 110,000+ corporate entities. Published <a href="whitepaper.pdf" target="_blank" class="inline-link">↗ white paper</a> on findings. Engineered supervisedML model to forecast North American corporate credit trends.
+                        <em class="highlight">Summer 2025.</em> Architected data pipeline to back-test 10 years of probability of default data from 40+ global banks on 110,000+ corporate entities. Published <a href="whitepaper.pdf" target="_blank" class="inline-link" onclick="posthog.capture('clicked_whitepaper')">↗ white paper</a> on findings. Engineered supervisedML model to forecast North American corporate credit trends.
                     </p>
                 </article>
 
@@ -115,11 +115,10 @@
             const grid = document.getElementById('tileGrid');
             const tileSize = 80;
             const cols = Math.ceil(window.innerWidth / tileSize) + 1;
-            const rows = Math.ceil(document.body.scrollHeight / tileSize) + 1;
+            const rows = Math.ceil(window.innerHeight / tileSize) + 1;
             
             grid.innerHTML = '';
             grid.style.setProperty('--cols', cols);
-            grid.style.height = (rows * tileSize) + 'px';
             
             for (let row = 0; row < rows; row++) {
                 for (let col = 0; col < cols; col++) {
@@ -140,10 +139,6 @@
         
         createTiles();
         window.addEventListener('resize', createTiles);
-        
-        // Recreate tiles when content changes height
-        const observer = new ResizeObserver(createTiles);
-        observer.observe(document.body);
     </script>
 </body>
 </html>

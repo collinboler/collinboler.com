@@ -19,19 +19,21 @@ body {
 
 /* Interactive tile grid */
 .tile-grid {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(var(--cols), 80px);
     grid-auto-rows: 80px;
     z-index: 0;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .tile {
+    pointer-events: auto;
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-right: none;
     border-bottom: none;
