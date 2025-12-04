@@ -3,37 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Collin Boler's personal site" />
-        <meta name="author" content="Collin Boler" />   
-        <title>Collin Boler</title>
-        <link rel="icon" type="image/x-icon" href="images/cb2.png" />
-        <link href="styles.css" rel="stylesheet" />
+    <meta name="description" content="Collin Boler's personal site" />
+    <meta name="author" content="Collin Boler" />
+    <title>Collin Boler</title>
+    <link rel="icon" type="image/x-icon" href="images/cb2.png" />
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="tile-grid" id="tileGrid"></div>
     <div class="container">
-        <nav>
+        <!-- <nav>
             <a href="index.html">home</a>
-        </nav>
+        </nav> -->
 
         <main>
             <header class="header-with-photo">
                 <div class="header-content">
                     <h1>Collin Boler</h1>
                     <p class="bio">
-                        Junior at Princeton University studying Computer Science with a minor in Statistics and Machine Learning.<br>
-                        I love building software and running fast.
+                        Junior at Princeton studying Computer Science and Machine Learning.
+                        I like building stuff and running.
                     </p>
                     <div class="links">
                         <a href="resume.pdf" target="_blank">↗ resume</a>
                         <a href="https://www.linkedin.com/in/collin-boler-8599b5263/" target="_blank">↗ linkedin</a>
                         <a href="https://github.com/collinboler" target="_blank">↗ github</a>
                         <a href="mailto:collinboler@princeton.edu">↗ email</a>
-        </div>
-    </div>
+                    </div>
+                </div>
                 <div class="header-photo">
                     <img src="collin.jpg" alt="Collin Boler">
-    </div>
+                </div>
             </header>
 
             <section>
@@ -42,7 +42,7 @@
                 <article>
                     <h3>Credit Benchmark - Data Science Intern</h3>
                     <p>
-                        <em class="highlight">Summer 2025.</em> Architected data pipeline to back-test 10 years of probability of default data from 40+ global banks on 110,000+ corporate entities. Published white paper on findings. Engineered ML model to forecast North American corporate credit trends.
+                        <em class="highlight">Summer 2025.</em> Architected data pipeline to back-test 10 years of probability of default data from 40+ global banks on 110,000+ corporate entities. Published <a href="whitepaper.pdf" target="_blank" class="inline-link">↗ white paper</a> on findings. Engineered ML model to forecast North American corporate credit trends.
                     </p>
                 </article>
 
@@ -100,10 +100,6 @@
                     </p>
                 </article>
             </section>
-
-            <footer>
-                <p>© 2024 Collin Boler</p>
-            </footer>
         </main>
     </div>
     <script>
@@ -122,15 +118,12 @@
                     const tile = document.createElement('div');
                     tile.className = 'tile';
                     
-                    // Calculate fade based on row (top to bottom) and col (left side - faster fade)
-                    const rowFade = Math.min(row / 10, 1);
-                    const colFade = Math.max(0, 1 - (col / 3)); // Faster left fade (was /4)
+                    // Calculate fade based on row (top to bottom) and col (left side)
+                    const rowFade = Math.min(row / 8, 1);
+                    const colFade = Math.max(0, 1 - (col / 4));
                     const totalFade = Math.max(rowFade, colFade);
                     
-                    // Store base opacity as data attribute, keep tile visible for hover
-                    const baseOpacity = Math.max(0, 1 - totalFade);
-                    tile.dataset.baseOpacity = baseOpacity;
-                    tile.style.setProperty('--base-opacity', baseOpacity);
+                    tile.style.opacity = Math.max(0, 1 - totalFade);
                     
                     grid.appendChild(tile);
                 }
