@@ -269,6 +269,7 @@ footer p {
 
     .links {
         gap: 16px;
+        justify-content: center;
     }
 
     .header-with-photo {
@@ -277,12 +278,14 @@ footer p {
         text-align: center;
     }
 
-    .header-photo img {
+    .header-photo {
         width: 140px;
-        margin-bottom: 20px;
+        height: 210px;
     }
 
-    .links {
-        justify-content: center;
+    .header-photo::before,
+    .header-photo::after {
+        width: 35px;
+        height: 35px;
     }
 }
