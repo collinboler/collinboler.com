@@ -24,6 +24,9 @@
     --bgColor--night: #423966;
     --mooncolor: #D9FBFF;
     --bgColor--day: #9ee3fb;
+
+    /* Text Gradients */
+    --text-gradient: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
 }
 
 /* Light mode */
@@ -38,6 +41,9 @@ body.light-mode {
     --tile-hover-border: rgba(0, 0, 0, 0.12);
     --footer-border: rgba(0, 0, 0, 0.1);
     --footer-text: #a3a3a3;
+    
+    /* Orange to black/dark-grey for better visibility on light background */
+    --text-gradient: linear-gradient(to top, #da3400, #000000);
 }
 
 html,
@@ -225,7 +231,7 @@ h1 {
     font-family: 'Instrument Serif', serif;
     font-size: 42px;
     font-weight: 400;
-    background: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
+    background: var(--text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -292,7 +298,7 @@ article p {
 }
 
 .highlight {
-    background: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
+    background: var(--text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
