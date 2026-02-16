@@ -22,7 +22,10 @@
     <meta name="twitter:image" content="https://collinboler.com/collin.jpg" />
     
     <link rel="icon" type="image/x-icon" href="cb.png" />
-        <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr Ur fi Lr zr ci Or jr capture Ai calculateEventProperties qr register register_once register_for_session unregister unregister_for_session Jr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Gr Br createPersonProfile Vr Cr Kr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Hr debug O Wr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
         posthog.init('phc_VCeJLAs5TGopxEBzvF8qVMkERfwNMlf18lEgXBKRO3Y', {
@@ -33,6 +36,9 @@
     </script>
 </head>
 <body>
+    <!-- <div class="tdnn" id="themeToggle">
+        <div class="moon"></div>
+    </div> -->
     <div class="tile-grid" id="tileGrid"></div>
     <div class="container">
         <!-- <nav>
@@ -79,6 +85,23 @@
             <section>
                 <h2>Projects</h2>
 
+                 <article>
+                    <h3>LeetCode Wrapped - Spotify Wrapped but for LeetCode</h3>
+                    <p>
+                        <em class="highlight">$5,000 in grants.</em> Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
+
+                        <a href="https://leetcodewrapped.com/" target="_blank" class="inline-link">↗ leetcodewrapped.com</a>
+                        <iframe src="https://ghbtns.com/github-btn.html?user=collinboler&repo=leetcodewrapped&type=star&count=true" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                    </p>
+                </article>
+
+                 <article>
+                    <h3>Social Media Video Generation Agent</h3>
+                    <p>
+                        <em class="highlight">$5,000 in grants.</em> Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
+                    </p>
+                </article>
+
                 <article>
                     <h3>Social Media Video Generation Agent</h3>
                     <p>
@@ -89,7 +112,7 @@
                 <article>
                     <h3>Computer Vision Geo-Location Chrome Extension</h3>
                     <p>
-                        <em class="highlight">8,000+ downloads, 2,000+ weekly active users.</em> Chrome extension leveraging a computer vision model trained on 5 million images to predict precise geographic location of on-screen images.
+                        <em class="highlight">11,000+ downloads, 2,900+ weekly active users.</em> Chrome extension leveraging a computer vision model trained on 5 million images to predict precise geographic location of on-screen images.
                     </p>
                 </article>
             </section>
@@ -164,6 +187,30 @@
         
         createTiles();
         window.addEventListener('resize', createTiles);
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const moonElement = themeToggle.querySelector('.moon');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        
+        if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('day');
+            moonElement.classList.add('sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('day');
+            moonElement.classList.toggle('sun');
+            
+            const isLight = body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
         </script>
 </body>
 </html>
