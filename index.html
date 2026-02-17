@@ -102,7 +102,7 @@
                 <article>
                     <h3>Computer Vision Geo-Location Chrome Extension</h3>
                     <p>
-                        Chrome extension leveraging a computer vision model trained on 5 million images to predict precise geographic location of on-screen images. <em class="highlight">12,000+ downloads, 3,100+ weekly active users.</em> 
+                        Chrome extension leveraging a computer vision model trained on 5 million images to predict precise geographic location of on-screen images. <em class="highlight">12,000+ downloads</em> 
                     </p>
                 </article>
                 <article>
@@ -188,28 +188,64 @@
         window.addEventListener('resize', createTiles);
         
         // Theme toggle functionality
+        // Theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
-        const moonElement = themeToggle.querySelector('.moon');
         const body = document.body;
         
-        // Check for saved theme preference or default to dark
+        // Function to apply theme
+        const applyTheme = (isLight) => {
+            if (isLight) {
+                body.classList.add('light-mode');
+                if (themeToggle) {
+                    themeToggle.classList.add('day');
+                    const moon = themeToggle.querySelector('.moon');
+                    if (moon) moon.classList.add('sun');
+                }
+            } else {
+                body.classList.remove('light-mode');
+                if (themeToggle) {
+                    themeToggle.classList.remove('day');
+                    const moon = themeToggle.querySelector('.moon');
+                    if (moon) moon.classList.remove('sun');
+                }
+            }
+        };
+
+        // 1. Check for saved theme preference
         const savedTheme = localStorage.getItem('theme');
-        const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
         
-        if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
-            body.classList.add('light-mode');
-            themeToggle.classList.add('day');
-            moonElement.classList.add('sun');
+        // 2. Check system preference
+        const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
+        
+        // Initialize
+        // If toggle is hidden, ignore saved preference to force auto-behavior
+        if (themeToggle && savedTheme === 'light') {
+            applyTheme(true);
+        } else if (themeToggle && savedTheme === 'dark') {
+            applyTheme(false);
+        } else {
+            // No saved preference OR toggle is hidden -> use system
+            applyTheme(systemPrefersLight.matches);
         }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            themeToggle.classList.toggle('day');
-            moonElement.classList.toggle('sun');
-            
-            const isLight = body.classList.contains('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+
+        // Listen for system changes 
+        systemPrefersLight.addEventListener('change', (e) => {
+            // If toggle is missing OR no user preference is set, follow system
+            if (!themeToggle || !localStorage.getItem('theme')) {
+                applyTheme(e.matches);
+            }
         });
+
+        // Event listener for toggle button (if it exists)
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isLight = body.classList.contains('light-mode');
+                // Toggle to the opposite
+                applyTheme(!isLight);
+                // Save preference
+                localStorage.setItem('theme', !isLight ? 'light' : 'dark');
+            });
+        }
         </script>
 </body>
 </html>
