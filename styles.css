@@ -6,16 +6,13 @@
 
 /* CSS Variables for theming */
 :root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #0a0a0a;
-    --text-primary: #e5e5e5;
-    --text-secondary: #a3a3a3;
-    --text-heading: #fff;
-    --tile-border: rgba(255, 255, 255, 0.04);
-    --tile-hover-bg: rgba(255, 255, 255, 0.08);
-    --tile-hover-border: rgba(255, 255, 255, 0.15);
-    --footer-border: rgba(255, 255, 255, 0.1);
-    --footer-text: #525252;
+    --bg-primary: #f6f6f4;
+    --bg-secondary: #f6f6f4;
+    --text-primary: #171717;
+    --text-secondary: #525252;
+    --text-heading: #0a0a0a;
+    --footer-border: rgba(0, 0, 0, 0.1);
+    --footer-text: #a3a3a3;
 
     /* Switcher variables */
     --toggleHeight: 16em;
@@ -31,14 +28,11 @@
 
 /* Light mode */
 body.light-mode {
-    --bg-primary: #fafafa;
-    --bg-secondary: #fafafa;
+    --bg-primary: #f6f6f4;
+    --bg-secondary: #f6f6f4;
     --text-primary: #171717;
     --text-secondary: #525252;
     --text-heading: #0a0a0a;
-    --tile-border: rgba(0, 0, 0, 0.06);
-    --tile-hover-bg: rgba(0, 0, 0, 0.04);
-    --tile-hover-border: rgba(0, 0, 0, 0.12);
     --footer-border: rgba(0, 0, 0, 0.1);
     --footer-text: #a3a3a3;
 }
@@ -118,34 +112,6 @@ body {
       -3.5em -3.5em 0 -3em #fff;
 }
 
-
-/* Interactive tile grid */
-.tile-grid {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(var(--cols), 80px);
-    grid-auto-rows: 80px;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-.tile {
-    pointer-events: auto;
-    border: 1px solid var(--tile-border);
-    border-right: none;
-    border-bottom: none;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-
-.tile:hover {
-    background-color: var(--tile-hover-bg);
-    border-color: var(--tile-hover-border);
-}
 
 .container {
     max-width: 720px;
@@ -346,11 +312,11 @@ footer {
     margin-top: 80px;
     padding-top: 24px;
     padding-bottom: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--footer-border);
 }
 
 footer p {
-    color: #525252;
+    color: var(--footer-text);
     font-size: 13px;
     margin-bottom: 0;
 }

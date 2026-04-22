@@ -36,7 +36,6 @@
     <!-- <div class="tdnn" id="themeToggle">
         <div class="moon"></div>
     </div> -->
-    <div class="tile-grid" id="tileGrid"></div>
     <div class="container">
         <!-- <nav>
             <a href="index.html">home</a>
@@ -158,34 +157,6 @@
         </main>
     </div>
     <script>
-        function createTiles() {
-            const grid = document.getElementById('tileGrid');
-            const tileSize = 80;
-            const cols = Math.ceil(window.innerWidth / tileSize) + 1;
-            const rows = Math.ceil(window.innerHeight / tileSize) + 1;
-            
-            grid.innerHTML = '';
-            grid.style.setProperty('--cols', cols);
-            
-            for (let row = 0; row < rows; row++) {
-                for (let col = 0; col < cols; col++) {
-                    const tile = document.createElement('div');
-                    tile.className = 'tile';
-                    
-                    // Calculate fade based on row (top to bottom) and col (left side)
-                    const rowFade = Math.min(row / 8, 1);
-                    const colFade = Math.max(0, 1 - (col / 4));
-                    const totalFade = Math.max(rowFade, colFade);
-                    
-                    tile.style.opacity = Math.max(0, 1 - totalFade);
-                    
-                    grid.appendChild(tile);
-                }
-            }
-        }
-        
-        createTiles();
-        window.addEventListener('resize', createTiles);
         
         // Theme toggle functionality
         // Theme toggle functionality
