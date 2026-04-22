@@ -65,7 +65,7 @@
                 <article>
                     <h3>Oracle - Incoming Cloud Engineering Intern</h3>
                     <p>
-                        <em class="highlight">Incoming Summer 2026.</em> Will work alongside Oracle OCI's AI Solutions team.
+                        <em class="highlight">Summer 2026.</em> Will work alongside Oracle OCI's AI Solutions team.
                     </p>
                 </article>
 
@@ -103,13 +103,15 @@
                 </article>
 
                 <article>
-                    <h3>LeetDuck  <a href="https://leetduck.com/" target="_blank" class="inline-link">↗ leetduck.com</a>
-                        <!-- <a href="https://github.com/collinboler/leetcodewrapped" target="_blank" class="inline-link">↗ github</a></h3>  -->
+                    <h3>LeetDuck <a href="https://leetduck.com/" target="_blank" class="inline-link">↗ leetduck.com</a></h3>
                     <p>
-                       Chrome extension and accompanying web app that features a realistic voice agent that acts as a mock interviewer for technical interview prep. <em class="highlight">Used by 280+ developers.</em>
+                       Chrome extension and accompanying web app that features a realistic voice agent that acts as a mock interviewer for technical interview prep. <em class="highlight">400+ downloads.</em>
                     </p>
                 </article>
 
+                <button type="button" id="projects-show-more" class="projects-show-more" aria-expanded="false" aria-controls="projects-more">show more</button>
+
+                <div id="projects-more" class="projects-more" hidden>
                 <!-- <article>
                     <h3>LeetDuck</h3>
                     <p>
@@ -123,6 +125,7 @@
                         Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
                     </p>
                 </article>
+                </div>
 
                 
             </section>
@@ -229,6 +232,19 @@
                 applyTheme(!isLight);
                 // Save preference
                 localStorage.setItem('theme', !isLight ? 'light' : 'dark');
+            });
+        }
+
+        const projectsShowMoreBtn = document.getElementById('projects-show-more');
+        const projectsMore = document.getElementById('projects-more');
+        if (projectsShowMoreBtn && projectsMore) {
+            projectsShowMoreBtn.addEventListener('click', () => {
+                if (!projectsMore.hasAttribute('hidden')) return;
+                projectsMore.removeAttribute('hidden');
+                projectsShowMoreBtn.remove();
+                if (window.posthog) {
+                    posthog.capture('expanded_projects_more');
+                }
             });
         }
         </script>

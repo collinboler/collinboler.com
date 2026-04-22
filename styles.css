@@ -259,6 +259,26 @@ article p {
     font-size: 15px;
 }
 
+.projects-show-more {
+    display: block;
+    margin: 4px 0 24px;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.projects-show-more:hover {
+    color: var(--text-heading);
+}
+
 .highlight {
     background: var(--text-gradient);
     -webkit-background-clip: text;
