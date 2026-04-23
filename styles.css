@@ -9,7 +9,8 @@
     --text-primary: #171717;
     --text-secondary: #525252;
     --text-heading: #0a0a0a;
-    --text-gradient: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
+    --text-gradient-2: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
+    --text-gradient: linear-gradient(to top, #000000, #333333, #666666);
 }
 
 html,
@@ -94,6 +95,8 @@ h1 {
     margin-bottom: 20px;
     letter-spacing: -0.02em;
 }
+
+
 
 .bio {
     color: var(--text-secondary);
