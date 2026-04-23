@@ -49,7 +49,8 @@
             align-items: center;
             gap: 24px;
         }
-        .resume-viewer-pages canvas {
+        .resume-viewer-pages canvas,
+        .resume-viewer-pages .resume-page-snapshot {
             max-width: 100%;
             height: auto;
             display: block;
@@ -75,6 +76,12 @@
             api_host: 'https://us.i.posthog.com',
             defaults: '2025-11-30',
             person_profiles: 'identified_only',
+            session_recording: {
+                captureCanvas: {
+                    canvasFps: 2,
+                    canvasQuality: '0.45',
+                },
+            },
         })
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous"></script>
@@ -140,7 +147,19 @@
                                     return page
                                         .render({ canvasContext: ctx, viewport: viewport })
                                         .promise.then(function () {
-                                            container.appendChild(canvas);
+                                            var img = document.createElement('img');
+                                            img.className = 'resume-page-snapshot';
+                                            img.alt = 'Resume, page ' + pageNum;
+                                            img.decoding = 'async';
+                                            try {
+                                                img.src = canvas.toDataURL('image/jpeg', 0.9);
+                                            } catch (err) {
+                                                container.appendChild(canvas);
+                                                return;
+                                            }
+                                            img.width = viewport.width;
+                                            img.height = viewport.height;
+                                            container.appendChild(img);
                                         });
                                 });
                             });
