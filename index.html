@@ -28,19 +28,12 @@
         posthog.init('phc_VCeJLAs5TGopxEBzvF8qVMkERfwNMlf18lEgXBKRO3Y', {
             api_host: 'https://us.i.posthog.com',
             defaults: '2025-11-30',
-            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+            person_profiles: 'identified_only',
         })
     </script>
 </head>
 <body>
-    <!-- <div class="tdnn" id="themeToggle">
-        <div class="moon"></div>
-    </div> -->
     <div class="container">
-        <!-- <nav>
-            <a href="index.html">home</a>
-        </nav> -->
-
         <main>
             <header class="header-with-photo">
                 <div class="header-content">
@@ -49,15 +42,15 @@
                         Junior at Princeton majoring in Computer Science and minoring in Statistics and Machine Learning.
                     </p>
                     <div class="links">
-                        <a href="resume.html" onclick="posthog.capture('clicked_resume', {}, { send_instantly: true })">↗ resume</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener" onclick="posthog.capture('clicked_resume', {}, { send_instantly: true })">↗ resume</a>
                         <a href="https://www.linkedin.com/in/collinboler/" target="_blank" onclick="posthog.capture('clicked_linkedin')">↗ linkedin</a>
                         <a href="https://github.com/collinboler" target="_blank" onclick="posthog.capture('clicked_github')">↗ github</a>
                         <a href="mailto:collinboler@princeton.edu" onclick="posthog.capture('clicked_email')">↗ email</a>
-        </div>
-    </div>
+                    </div>
+                </div>
                 <div class="header-photo">
                     <img src="collin.jpg" alt="Collin Boler">
-    </div>
+                </div>
             </header>
 
             <section>
@@ -87,7 +80,7 @@
             <section>
                 <h2>Selected Projects</h2>
 
-                 <article>
+                <article>
                     <h3>LeetCode Wrapped  <a href="https://leetcodewrapped.com/" target="_blank" class="inline-link">↗ leetcodewrapped.com</a>
                         <a href="https://github.com/collinboler/leetcodewrapped" target="_blank" class="inline-link">↗ github</a></h3> 
                     <p>
@@ -111,23 +104,14 @@
 
                 <button type="button" id="projects-show-more" class="projects-show-more" aria-expanded="false" aria-controls="projects-more">show more</button>
 
-                <div id="projects-more" class="projects-more" hidden>
-                <!-- <article>
-                    <h3>LeetDuck</h3>
-                    <p>
-                        <em class="highlight">$5,000 in grants.</em> Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
-                    </p>
-                </article> -->
-
-                <article>
-                    <h3>Social Media Video Generation Agent</h3>
-                    <p>
-                        Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
-                    </p>
-                </article>
+                <div id="projects-more" hidden>
+                    <article>
+                        <h3>Social Media Video Generation Agent</h3>
+                        <p>
+                            Shipped an agentic AI social media video automation platform, reducing users' average video creation time by 95%. Integrating into Sentient AGI's platform (2 million users).
+                        </p>
+                    </article>
                 </div>
-
-                
             </section>
             <section>
                 <h2>Publications</h2>
@@ -135,7 +119,7 @@
                 <article>
                     <h3>Discriminatory Power of Consensus Ratings <a href="https://www.creditbenchmark.com/knowledge-base/discriminatory-power-of-consensus-ratings/" target="_blank" class="inline-link" onclick="posthog.capture('clicked_publication')">↗ link</a>
                     <a href="https://collinboler.com/whitepaper.pdf" target="_blank" class="inline-link" onclick="posthog.capture('clicked_publication')">↗ pdf</a></h3>
-                </h3><p>
+                    <p>
                         <em class="highlight">Credit Benchmark, November 2025.</em> Research analyzing how Credit Benchmark's Credit Consensus Ratings compare to S&P Global Ratings in identifying default risk. Results show CCRs demonstrate strong discriminatory power over the past decade, performing on par with S&P's ratings.
                     </p>
                 </article>
@@ -151,8 +135,6 @@
                     </p>
                 </article>
             </section>
-
-          
 
             <section>
                 <h2>Awards</h2>
@@ -174,67 +156,6 @@
         </main>
     </div>
     <script>
-        
-        // Theme toggle functionality
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Function to apply theme
-        const applyTheme = (isLight) => {
-            if (isLight) {
-                body.classList.add('light-mode');
-                if (themeToggle) {
-                    themeToggle.classList.add('day');
-                    const moon = themeToggle.querySelector('.moon');
-                    if (moon) moon.classList.add('sun');
-                }
-            } else {
-                body.classList.remove('light-mode');
-                if (themeToggle) {
-                    themeToggle.classList.remove('day');
-                    const moon = themeToggle.querySelector('.moon');
-                    if (moon) moon.classList.remove('sun');
-                }
-            }
-        };
-
-        // 1. Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        
-        // 2. Check system preference
-        const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
-        
-        // Initialize
-        // If toggle is hidden, ignore saved preference to force auto-behavior
-        if (themeToggle && savedTheme === 'light') {
-            applyTheme(true);
-        } else if (themeToggle && savedTheme === 'dark') {
-            applyTheme(false);
-        } else {
-            // No saved preference OR toggle is hidden -> use system
-            applyTheme(systemPrefersLight.matches);
-        }
-
-        // Listen for system changes 
-        systemPrefersLight.addEventListener('change', (e) => {
-            // If toggle is missing OR no user preference is set, follow system
-            if (!themeToggle || !localStorage.getItem('theme')) {
-                applyTheme(e.matches);
-            }
-        });
-
-        // Event listener for toggle button (if it exists)
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                const isLight = body.classList.contains('light-mode');
-                // Toggle to the opposite
-                applyTheme(!isLight);
-                // Save preference
-                localStorage.setItem('theme', !isLight ? 'light' : 'dark');
-            });
-        }
-
         const projectsShowMoreBtn = document.getElementById('projects-show-more');
         const projectsMore = document.getElementById('projects-more');
         if (projectsShowMoreBtn && projectsMore) {
@@ -247,6 +168,6 @@
                 }
             });
         }
-        </script>
+    </script>
 </body>
 </html>

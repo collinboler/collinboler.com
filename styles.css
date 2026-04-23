@@ -4,37 +4,12 @@
     box-sizing: border-box;
 }
 
-/* CSS Variables for theming */
 :root {
     --bg-primary: #f6f6f4;
-    --bg-secondary: #f6f6f4;
     --text-primary: #171717;
     --text-secondary: #525252;
     --text-heading: #0a0a0a;
-    --footer-border: rgba(0, 0, 0, 0.1);
-    --footer-text: #a3a3a3;
-
-    /* Switcher variables */
-    --toggleHeight: 16em;
-    --toggleWidth: 30em;
-    --toggleBtnRadius: 10em;
-    --bgColor--night: #423966;
-    --mooncolor: #D9FBFF;
-    --bgColor--day: #9ee3fb;
-
-    /* Text Gradients */
     --text-gradient: linear-gradient(to top, #da3400, #ff8c66, #ffb899);
-}
-
-/* Light mode */
-body.light-mode {
-    --bg-primary: #f6f6f4;
-    --bg-secondary: #f6f6f4;
-    --text-primary: #171717;
-    --text-secondary: #525252;
-    --text-heading: #0a0a0a;
-    --footer-border: rgba(0, 0, 0, 0.1);
-    --footer-text: #a3a3a3;
 }
 
 html,
@@ -49,69 +24,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* New Theme Toggle */
-.tdnn {
-    font-size: 8%; /* Scaled down further to be more discreet */
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    height: var(--toggleHeight);
-    width: var(--toggleWidth);
-    border-radius: var(--toggleHeight);
-    transition: all 500ms ease-in-out;
-    background: var(--bgColor--night);
-    cursor: pointer;
-    z-index: 100;
-}
-
-.tdnn.day {
-    background: #FFBF71;
-}
-
-.moon {
-    position: absolute;
-    display: block;
-    border-radius: 50%;
-    transition: all 400ms ease-in-out;
-    top: 3em;
-    left: 3em;
-    transform: rotate(-75deg);
-    width: var(--toggleBtnRadius);
-    height: var(--toggleBtnRadius);
-    background: var(--bgColor--night);
-    box-shadow: 
-      3em 2.5em 0 0em var(--mooncolor) inset,
-      rgba(255, 255, 255, 0.1) 0em -7em 0 -4.5em,
-      rgba(255, 255, 255, 0.1) 3em 7em 0 -4.5em,
-      rgba(255, 255, 255, 0.1) 2em 13em 0 -4em,
-      rgba(255, 255, 255, 0.1) 6em 2em 0 -4.1em,
-      rgba(255, 255, 255, 0.1) 8em 8em 0 -4.5em,
-      rgba(255, 255, 255, 0.1) 6em 13em 0 -4.5em,
-      rgba(255, 255, 255, 0.1) -4em 7em 0 -4.5em,
-      rgba(255, 255, 255, 0.1) -1em 10em 0 -4.5em;
-}
-
-.moon.sun {
-    top: 4.5em;
-    left: 18em;
-    transform: rotate(0deg);
-    width: 7em;
-    height: 7em;
-    background: #fff;
-    box-shadow: 3em 3em 0 5em #fff inset,
-      0 -5em 0 -2.7em #fff,
-      3.5em -3.5em 0 -3em #fff,
-      5em 0 0 -2.7em #fff,
-      3.5em 3.5em 0 -3em #fff,
-      0 5em 0 -2.7em #fff,
-      -3.5em 3.5em 0 -3em #fff,
-      -5em 0 0 -2.7em #fff,
-      -3.5em -3.5em 0 -3em #fff;
-}
-
 
 .container {
     max-width: 720px;
@@ -124,22 +37,6 @@ body {
 
 .container * {
     pointer-events: auto;
-}
-
-/* Navigation */
-nav {
-    margin-bottom: 40px;
-}
-
-nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-nav a:hover {
-    color: var(--text-heading);
 }
 
 /* Header */
@@ -161,9 +58,6 @@ header {
 
 .header-photo {
     flex-shrink: 0;
-}
-
-.header-photo {
     position: relative;
     width: 160px;
     height: 240px;
@@ -288,27 +182,6 @@ article p {
     font-weight: 600;
 }
 
-.meta {
-    color: #737373;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.project-link {
-    margin-top: 8px;
-}
-
-.project-link a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
-}
-
-.project-link a:hover {
-    color: var(--text-heading);
-}
-
 article a {
     color: #da3400;
     text-decoration: none;
@@ -325,20 +198,6 @@ article a.inline-link {
 
 article a.inline-link:hover {
     color: var(--text-heading);
-}
-
-/* Footer */
-footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    padding-bottom: 40px;
-    border-top: 1px solid var(--footer-border);
-}
-
-footer p {
-    color: var(--footer-text);
-    font-size: 13px;
-    margin-bottom: 0;
 }
 
 /* Mobile responsiveness */
@@ -365,11 +224,5 @@ footer p {
     .header-photo {
         width: 140px;
         height: 210px;
-    }
-
-    .header-photo::before,
-    .header-photo::after {
-        width: 35px;
-        height: 35px;
     }
 }
