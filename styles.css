@@ -27,6 +27,18 @@ body {
     position: relative;
 }
 
+.language-bash {
+    display: inline-block;
+    padding: 0.15em 0.45em;
+    border-radius: 6px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.95em;
+    color: #111827;
+    white-space: nowrap;
+  }
+
 .container {
     max-width: 720px;
     margin: 0 auto;
