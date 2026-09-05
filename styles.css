@@ -70,20 +70,21 @@ header {
 }
 
 .header-photo {
+    --corner-cut: 24px;
     flex-shrink: 0;
     position: relative;
     width: 160px;
-    height: 240px;
+    aspect-ratio: 1;
     overflow: hidden;
     margin-top: 0;
     /* Use clip-path for clean transparent corner cuts */
     clip-path: polygon(
-        40px 0, 
+        var(--corner-cut) 0,
         100% 0, 
-        100% calc(100% - 40px), 
-        calc(100% - 40px) 100%, 
+        100% calc(100% - var(--corner-cut)),
+        calc(100% - var(--corner-cut)) 100%,
         0 100%, 
-        0 40px
+        0 var(--corner-cut)
     );
 }
 
@@ -91,7 +92,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     display: block;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: high-quality;
@@ -163,6 +164,11 @@ h3 a.inline-link {
     margin-left: 8px;
 }
 
+article a.inline-link {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 article p {
     color: var(--text-secondary);
     font-size: 15px;
@@ -215,8 +221,48 @@ article a.inline-link:hover {
     color: var(--text-heading);
 }
 
+/* Athletics photo caption */
+.athletics-photo {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.athletics-photo .header-photo {
+    width: 100%;
+}
+
+.athletics-photo figcaption {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: inherit;
+}
+
+@media (max-width: 480px) {
+    .athletics-photo {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        width: 100%;
+        gap: 12px;
+    }
+}
+
 /* Mobile responsiveness */
 @media (max-width: 640px) {
+    .article-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        margin-top: 4px;
+    }
+
+    h3 .article-links a.inline-link {
+        margin-left: 0;
+    }
+
     .container {
         padding: 40px 20px;
     }
@@ -237,7 +283,7 @@ article a.inline-link:hover {
     }
 
     .header-photo {
+        --corner-cut: 20px;
         width: 140px;
-        height: 210px;
     }
 }
